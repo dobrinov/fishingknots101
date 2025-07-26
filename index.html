@@ -57,19 +57,17 @@
             </p>
           </div>
 
-          <!-- Search Bar -->
-          <div class="mt-4 md:mt-0 md:w-80">
-            <div class="relative">
-              <input
-                type="text"
-                id="searchInput"
-                placeholder="Search knots, tags, or difficulty..."
-                class="w-full px-4 py-2 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-300"
-              />
-              <svg class="absolute right-3 top-2.5 h-5 w-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <!-- Search Button -->
+          <div class="mt-4 md:mt-0">
+            <button
+              id="openSearchModal"
+              class="bg-blue-700 hover:bg-blue-600 text-white px-6 py-2 rounded-lg transition-colors flex items-center gap-2"
+            >
+              <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
               </svg>
-            </div>
+              Search Knots
+            </button>
           </div>
         </div>
       </div>
@@ -77,46 +75,7 @@
 
     <!-- Main Content -->
     <main class="container mx-auto px-4 py-8">
-      <!-- Filter Section -->
-      <div class="mb-8 bg-white rounded-lg shadow-md p-6">
-        <h2 class="text-xl font-semibold mb-4">Filter Knots</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-          <div>
-            <label class="block text-sm font-medium text-gray-700 mb-2">Difficulty</label>
-            <select id="difficultyFilter" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
-              <option value="">All Difficulties</option>
-              <option value="Easy">Easy</option>
-              <option value="Medium">Medium</option>
-              <option value="Hard">Hard</option>
-            </select>
-          </div>
-          <div>
-            <label class="block text-sm font-medium text-gray-700 mb-2">Strength</label>
-            <select id="strengthFilter" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
-              <option value="">All Strengths</option>
-              <option value="High">High</option>
-              <option value="Medium">Medium</option>
-              <option value="Low">Low</option>
-            </select>
-          </div>
-          <div>
-            <label class="block text-sm font-medium text-gray-700 mb-2">Use Case</label>
-            <select id="tagFilter" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
-              <option value="">All Use Cases</option>
-              <option value="hook">Hook Attachment</option>
-              <option value="line-to-line">Line to Line</option>
-              <option value="loop">Loop Formation</option>
-              <option value="swivel">Swivel Connection</option>
-              <option value="braid-to-mono">Braid to Mono</option>
-              <option value="braid-to-fluoro">Braid to Fluoro</option>
-              <option value="leader">Leader Connection</option>
-            </select>
-          </div>
-        </div>
-        <button id="clearFilters" class="mt-4 px-4 py-2 bg-gray-500 text-white rounded-md hover:bg-gray-600 transition-colors">
-          Clear Filters
-        </button>
-      </div>
+
 
       <!-- Knots Grid -->
       <div class="mb-4">
@@ -202,6 +161,83 @@
                   class="rounded-lg"
                 ></iframe>
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Search Modal -->
+    <div id="searchModal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 flex items-center justify-center p-4">
+      <div class="bg-white rounded-lg max-w-2xl w-full max-h-[90vh] overflow-auto">
+        <div class="flex justify-between items-center p-6 border-b">
+          <h2 class="text-2xl font-bold text-gray-800">Search & Filter Knots</h2>
+          <button id="closeSearchModal" class="text-gray-500 hover:text-gray-700 text-3xl font-bold">
+            &times;
+          </button>
+        </div>
+
+        <div class="p-6">
+          <div class="space-y-6">
+            <!-- Search Input -->
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-2">Search</label>
+              <div class="relative">
+                <input
+                  type="text"
+                  id="searchInput"
+                  placeholder="Search knots, tags, or difficulty..."
+                  class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
+                <svg class="absolute right-3 top-2.5 h-5 w-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                </svg>
+              </div>
+            </div>
+
+            <!-- Filters -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">Difficulty</label>
+                <select id="modalDifficultyFilter" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                  <option value="">All Difficulties</option>
+                  <option value="Easy">Easy</option>
+                  <option value="Medium">Medium</option>
+                  <option value="Hard">Hard</option>
+                </select>
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">Strength</label>
+                <select id="modalStrengthFilter" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                  <option value="">All Strengths</option>
+                  <option value="High">High</option>
+                  <option value="Medium">Medium</option>
+                  <option value="Low">Low</option>
+                </select>
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">Use Case</label>
+                <select id="modalTagFilter" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                  <option value="">All Use Cases</option>
+                  <option value="hook">Hook Attachment</option>
+                  <option value="line-to-line">Line to Line</option>
+                  <option value="loop">Loop Formation</option>
+                  <option value="swivel">Swivel Connection</option>
+                  <option value="braid-to-mono">Braid to Mono</option>
+                  <option value="braid-to-fluoro">Braid to Fluoro</option>
+                  <option value="leader">Leader Connection</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="flex gap-4 pt-4">
+              <button id="performSearch" class="flex-1 bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition-colors">
+                Search
+              </button>
+              <button id="clearSearchFilters" class="flex-1 bg-gray-500 text-white py-2 px-4 rounded-md hover:bg-gray-600 transition-colors">
+                Clear Filters
+              </button>
             </div>
           </div>
         </div>
@@ -394,11 +430,15 @@
       ];
 
       // DOM Elements
+      const openSearchModalBtn = document.getElementById('openSearchModal');
+      const searchModal = document.getElementById('searchModal');
+      const closeSearchModalBtn = document.getElementById('closeSearchModal');
       const searchInput = document.getElementById('searchInput');
-      const difficultyFilter = document.getElementById('difficultyFilter');
-      const strengthFilter = document.getElementById('strengthFilter');
-      const tagFilter = document.getElementById('tagFilter');
-      const clearFiltersBtn = document.getElementById('clearFilters');
+      const difficultyFilter = document.getElementById('modalDifficultyFilter');
+      const strengthFilter = document.getElementById('modalStrengthFilter');
+      const tagFilter = document.getElementById('modalTagFilter');
+      const performSearchBtn = document.getElementById('performSearch');
+      const clearFiltersBtn = document.getElementById('clearSearchFilters');
       const knotsContainer = document.getElementById('knotsContainer');
       const knotCount = document.getElementById('knotCount');
       const noResults = document.getElementById('noResults');
@@ -634,13 +674,36 @@
         renderKnots();
       }
 
+      // Search Modal Functions
+      function openSearchModal() {
+        searchModal.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+        // Focus on search input when modal opens
+        setTimeout(() => searchInput.focus(), 100);
+      }
+
+      function closeSearchModal() {
+        searchModal.classList.add('hidden');
+        document.body.style.overflow = 'auto';
+      }
+
       // Event Listeners
-      searchInput.addEventListener('input', filterKnots);
-      difficultyFilter.addEventListener('change', filterKnots);
-      strengthFilter.addEventListener('change', filterKnots);
-      tagFilter.addEventListener('change', filterKnots);
+      openSearchModalBtn.addEventListener('click', openSearchModal);
+      closeSearchModalBtn.addEventListener('click', closeSearchModal);
+      performSearchBtn.addEventListener('click', () => {
+        filterKnots();
+        closeSearchModal();
+      });
       clearFiltersBtn.addEventListener('click', clearFilters);
       closeModal.addEventListener('click', closeModalFunction);
+
+      // Allow Enter key to perform search in modal
+      searchInput.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') {
+          filterKnots();
+          closeSearchModal();
+        }
+      });
 
       // Close modal when clicking outside
       modal.addEventListener('click', (e) => {
@@ -649,10 +712,21 @@
         }
       });
 
-      // Close modal with Escape key
+      // Close search modal when clicking outside
+      searchModal.addEventListener('click', (e) => {
+        if (e.target === searchModal) {
+          closeSearchModal();
+        }
+      });
+
+      // Close modals with Escape key
       document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
-          closeModalFunction();
+        if (e.key === 'Escape') {
+          if (!modal.classList.contains('hidden')) {
+            closeModalFunction();
+          } else if (!searchModal.classList.contains('hidden')) {
+            closeSearchModal();
+          }
         }
       });
 
