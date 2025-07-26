@@ -556,7 +556,7 @@
 
         // Update URL hash
         if (updateHash) {
-          window.history.pushState(null, null, `#knot-${knot.id}`);
+          window.history.pushState(null, null, `#${slugify(knot.name)}`);
         }
       }
 
@@ -573,11 +573,20 @@
       }
 
       // URL Hash Functions
+      function slugify(text) {
+        return text
+          .toLowerCase()
+          .replace(/[^\w\s-]/g, '') // Remove special characters except hyphens
+          .replace(/\s+/g, '-')     // Replace spaces with hyphens
+          .replace(/--+/g, '-')     // Replace multiple hyphens with single hyphen
+          .trim();
+      }
+
       function getKnotFromHash() {
         const hash = window.location.hash;
-        if (hash.startsWith('#knot-')) {
-          const knotId = parseInt(hash.replace('#knot-', ''));
-          return fishingKnots.find(k => k.id === knotId);
+        if (hash.startsWith('#')) {
+          const knotSlug = hash.replace('#', '');
+          return fishingKnots.find(k => slugify(k.name) === knotSlug);
         }
         return null;
       }
