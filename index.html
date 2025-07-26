@@ -1,13 +1,637 @@
 <!doctype html>
-<html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fishing Knots 101 - Complete Guide to Essential Fishing Knots</title>
+    <meta name="description" content="Learn the most important fishing knots with step-by-step video tutorials. Master clinch knots, FG knots, surgeon's knots, and more essential fishing techniques." />
+    <meta name="keywords" content="fishing knots, clinch knot, FG knot, surgeon's knot, alberto knot, palomar knot, fishing tutorials, angling, fishing techniques" />
+    <meta name="author" content="Fishing Knots 101" />
+
+    <!-- Open Graph tags for social sharing -->
+    <meta property="og:title" content="Fishing Knots 101 - Complete Guide to Essential Fishing Knots" />
+    <meta property="og:description" content="Learn the most important fishing knots with step-by-step video tutorials." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://fishingknots101.com" />
+
+    <!-- Twitter Card tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Fishing Knots 101 - Complete Guide to Essential Fishing Knots" />
+    <meta name="twitter:description" content="Learn the most important fishing knots with step-by-step video tutorials." />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://fishingknots101.com" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Fishing Knots 101",
+      "description": "Complete guide to essential fishing knots with video tutorials",
+      "url": "https://fishingknots101.com",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://fishingknots101.com/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
   </head>
-  <body>
-    <h1 class="text-3xl font-bold underline">
-      Hello world!
-    </h1>
+  <body class="bg-gray-50 min-h-screen">
+    <!-- Header -->
+    <header class="bg-blue-900 text-white shadow-lg">
+      <div class="container mx-auto px-4 py-6">
+        <div class="flex flex-col md:flex-row md:items-center md:justify-between">
+          <div>
+            <h1 class="text-3xl md:text-4xl font-bold mb-2">
+              🎣 Fishing Knots 101
+            </h1>
+            <p class="text-blue-200 text-lg">
+              Master the essential knots every angler needs to know
+            </p>
+          </div>
+
+          <!-- Search Bar -->
+          <div class="mt-4 md:mt-0 md:w-80">
+            <div class="relative">
+              <input
+                type="text"
+                id="searchInput"
+                placeholder="Search knots, tags, or difficulty..."
+                class="w-full px-4 py-2 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-300"
+              />
+              <svg class="absolute right-3 top-2.5 h-5 w-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8">
+      <!-- Filter Section -->
+      <div class="mb-8 bg-white rounded-lg shadow-md p-6">
+        <h2 class="text-xl font-semibold mb-4">Filter Knots</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-2">Difficulty</label>
+            <select id="difficultyFilter" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+              <option value="">All Difficulties</option>
+              <option value="Easy">Easy</option>
+              <option value="Medium">Medium</option>
+              <option value="Hard">Hard</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-2">Strength</label>
+            <select id="strengthFilter" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+              <option value="">All Strengths</option>
+              <option value="High">High</option>
+              <option value="Medium">Medium</option>
+              <option value="Low">Low</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-2">Use Case</label>
+            <select id="tagFilter" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+              <option value="">All Use Cases</option>
+              <option value="hook">Hook Attachment</option>
+              <option value="line-to-line">Line to Line</option>
+              <option value="loop">Loop Formation</option>
+              <option value="swivel">Swivel Connection</option>
+              <option value="braid-to-mono">Braid to Mono</option>
+              <option value="braid-to-fluoro">Braid to Fluoro</option>
+              <option value="leader">Leader Connection</option>
+            </select>
+          </div>
+        </div>
+        <button id="clearFilters" class="mt-4 px-4 py-2 bg-gray-500 text-white rounded-md hover:bg-gray-600 transition-colors">
+          Clear Filters
+        </button>
+      </div>
+
+      <!-- Knots Grid -->
+      <div class="mb-4">
+        <p id="knotCount" class="text-gray-600 text-sm"></p>
+      </div>
+
+      <div id="knotsContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <!-- Knots will be dynamically inserted here -->
+      </div>
+
+      <!-- No Results Message -->
+      <div id="noResults" class="hidden text-center py-12">
+        <div class="text-gray-400 text-6xl mb-4">🎣</div>
+        <h3 class="text-xl font-semibold text-gray-600 mb-2">No knots found</h3>
+        <p class="text-gray-500">Try adjusting your search or filters</p>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white mt-16">
+      <div class="container mx-auto px-4 py-8">
+        <div class="text-center">
+          <h3 class="text-xl font-semibold mb-4">Fishing Knots 101</h3>
+          <p class="text-gray-400 mb-4">
+            Your comprehensive guide to mastering essential fishing knots
+          </p>
+          <p class="text-sm text-gray-500">
+            © 2025 Fishing Knots 101. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Modal -->
+    <div id="knotModal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 flex items-center justify-center p-4">
+      <div class="bg-white rounded-lg max-w-4xl w-full max-h-[90vh] overflow-auto">
+        <div class="flex justify-between items-center p-6 border-b">
+          <h2 id="modalTitle" class="text-2xl font-bold text-gray-800"></h2>
+          <button id="closeModal" class="text-gray-500 hover:text-gray-700 text-3xl font-bold">
+            &times;
+          </button>
+        </div>
+
+        <div class="p-6">
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            <!-- Knot Details -->
+            <div class="lg:col-span-1">
+              <div class="space-y-4">
+                <div>
+                  <h3 class="font-semibold text-gray-700 mb-2">Difficulty</h3>
+                  <span id="modalDifficulty" class="inline-block px-3 py-1 rounded-full text-sm font-medium"></span>
+                </div>
+
+                <div>
+                  <h3 class="font-semibold text-gray-700 mb-2">Strength</h3>
+                  <span id="modalStrength" class="inline-block px-3 py-1 rounded-full text-sm font-medium"></span>
+                </div>
+
+                <div>
+                  <h3 class="font-semibold text-gray-700 mb-2">Best Used For</h3>
+                  <div id="modalTags" class="flex flex-wrap gap-2"></div>
+                </div>
+
+                <div>
+                  <h3 class="font-semibold text-gray-700 mb-2">Description</h3>
+                  <p id="modalDescription" class="text-gray-600 text-sm leading-relaxed"></p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Video Player -->
+            <div class="lg:col-span-2">
+              <div class="aspect-video">
+                <iframe
+                  id="modalVideo"
+                  width="100%"
+                  height="100%"
+                  src=""
+                  title="Fishing Knot Tutorial"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                  class="rounded-lg"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Fishing Knots Data Structure
+      const fishingKnots = [
+        {
+          id: 1,
+          name: "Improved Clinch Knot",
+          difficulty: "Easy",
+          strength: "Medium",
+          tags: ["hook", "lure", "swivel", "beginner-friendly"],
+          description: "The most popular knot for tying line to hook, lure or swivel. Easy to tie and reliable for most fishing situations.",
+          videoId: "-cJm6TKmtu0"
+        },
+        {
+          id: 2,
+          name: "FG Knot",
+          difficulty: "Hard",
+          strength: "High",
+          tags: ["braid-to-fluoro", "braid-to-mono", "leader", "line-to-line"],
+          description: "Very strong leader knot that joins braided line to fluorocarbon or monofilament leader. Preferred by many professional anglers.",
+          videoId: "-cJm6TKmtu0"
+        },
+        {
+          id: 3,
+          name: "Surgeon's Knot",
+          difficulty: "Easy",
+          strength: "High",
+          tags: ["line-to-line", "leader", "quick-tie"],
+          description: "Easy knot to join two lines of moderately unequal size. Quick to tie and very reliable.",
+          videoId: "-cJm6TKmtu0"
+        },
+        {
+          id: 4,
+          name: "Alberto Knot",
+          difficulty: "Medium",
+          strength: "High",
+          tags: ["braid-to-fluoro", "braid-to-mono", "leader", "line-to-line"],
+          description: "Excellent knot for connecting braided line to fluorocarbon or monofilament leader. Easier to tie than the FG knot.",
+          videoId: "-cJm6TKmtu0"
+        },
+        {
+          id: 5,
+          name: "Palomar Knot",
+          difficulty: "Easy",
+          strength: "High",
+          tags: ["hook", "lure", "braid", "strong"],
+          description: "Best knot for attaching braided line to a hook. Very strong and maintains most of the line's original strength.",
+          videoId: "-cJm6TKmtu0"
+        },
+        {
+          id: 6,
+          name: "Uni Knot",
+          difficulty: "Easy",
+          strength: "Medium",
+          tags: ["hook", "lure", "swivel", "versatile"],
+          description: "Versatile knot that can be used for hooks, lures, and swivels. Easy to tie and adjust.",
+          videoId: "-cJm6TKmtu0"
+        },
+        {
+          id: 7,
+          name: "Blood Knot",
+          difficulty: "Medium",
+          strength: "High",
+          tags: ["line-to-line", "similar-diameter", "fly-fishing"],
+          description: "One of the best knots for joining two lines of similar diameter. Popular in fly fishing.",
+          videoId: "-cJm6TKmtu0"
+        },
+        {
+          id: 8,
+          name: "Double Uni Knot",
+          difficulty: "Medium",
+          strength: "High",
+          tags: ["braid-to-mono", "braid-to-fluoro", "line-to-line", "reliable"],
+          description: "Reliable knot for connecting braided line to monofilament or fluorocarbon. Good alternative to the FG knot.",
+          videoId: "-cJm6TKmtu0"
+        },
+        {
+          id: 9,
+          name: "Rapala Knot",
+          difficulty: "Medium",
+          strength: "High",
+          tags: ["lure", "hook", "loop", "action-preserving"],
+          description: "A non-slip loop knot that allows lures to move more freely, enhancing their action in the water.",
+          videoId: "-cJm6TKmtu0"
+        },
+        {
+          id: 10,
+          name: "Albright Knot",
+          difficulty: "Medium",
+          strength: "High",
+          tags: ["line-to-line", "different-diameter", "leader"],
+          description: "Used to join different types or thicknesses of fishing line. Great for connecting heavy leader to lighter main line.",
+          videoId: "-cJm6TKmtu0"
+        },
+        {
+          id: 11,
+          name: "Perfection Loop",
+          difficulty: "Medium",
+          strength: "High",
+          tags: ["loop", "fly-fishing", "leader"],
+          description: "Creates a small, strong loop at the end of a line. Perfect for loop-to-loop connections.",
+          videoId: "-cJm6TKmtu0"
+        },
+        {
+          id: 12,
+          name: "Trilene Knot",
+          difficulty: "Easy",
+          strength: "High",
+          tags: ["hook", "mono", "strong"],
+          description: "Strong knot for joining monofilament line to hooks. Passes through the hook eye twice for extra security.",
+          videoId: "-cJm6TKmtu0"
+        },
+        {
+          id: 13,
+          name: "Bimini Twist",
+          difficulty: "Hard",
+          strength: "High",
+          tags: ["double-line", "loop", "offshore", "leader"],
+          description: "Creates a strong double-line leader and is excellent for loop-to-loop connections. Popular in offshore fishing.",
+          videoId: "-cJm6TKmtu0"
+        },
+        {
+          id: 14,
+          name: "Snell Knot",
+          difficulty: "Medium",
+          strength: "High",
+          tags: ["hook", "leader", "direct-tie"],
+          description: "Allows leader or tippet to be tied directly to a hook. Provides excellent hook-setting power.",
+          videoId: "-cJm6TKmtu0"
+        },
+        {
+          id: 15,
+          name: "Haywire Twist",
+          difficulty: "Medium",
+          strength: "High",
+          tags: ["wire", "leader", "offshore", "toothy-fish"],
+          description: "Provides a strong connection for wire leader to hook or swivel. Essential for fish with sharp teeth.",
+          videoId: "-cJm6TKmtu0"
+        },
+        {
+          id: 16,
+          name: "Dropper Loop",
+          difficulty: "Medium",
+          strength: "Medium",
+          tags: ["loop", "multiple-hooks", "bottom-fishing"],
+          description: "Creates a loop anywhere along the fishing line, perfect for attaching additional hooks or weights.",
+          videoId: "-cJm6TKmtu0"
+        },
+        {
+          id: 17,
+          name: "Nail Knot",
+          difficulty: "Hard",
+          strength: "High",
+          tags: ["fly-fishing", "line-to-line", "leader"],
+          description: "Used to join two lines of different diameters. Popular in fly fishing for attaching leader to fly line.",
+          videoId: "-cJm6TKmtu0"
+        },
+        {
+          id: 18,
+          name: "Arbor Knot",
+          difficulty: "Easy",
+          strength: "Low",
+          tags: ["reel", "backing", "spool"],
+          description: "Used to attach your fishing line to the reel spool center. Simple and effective for this specific purpose.",
+          videoId: "-cJm6TKmtu0"
+        },
+        {
+          id: 19,
+          name: "Loop to Loop Connection",
+          difficulty: "Easy",
+          strength: "High",
+          tags: ["loop", "connection", "quick-change"],
+          description: "Method of joining two loops together. Allows for quick leader changes and strong connections.",
+          videoId: "-cJm6TKmtu0"
+        },
+        {
+          id: 20,
+          name: "Orvis Knot",
+          difficulty: "Easy",
+          strength: "High",
+          tags: ["hook", "fly-fishing", "small", "strong"],
+          description: "Small yet very strong knot to attach a hook to a line. Popular in fly fishing applications.",
+          videoId: "-cJm6TKmtu0"
+        }
+      ];
+
+      // DOM Elements
+      const searchInput = document.getElementById('searchInput');
+      const difficultyFilter = document.getElementById('difficultyFilter');
+      const strengthFilter = document.getElementById('strengthFilter');
+      const tagFilter = document.getElementById('tagFilter');
+      const clearFiltersBtn = document.getElementById('clearFilters');
+      const knotsContainer = document.getElementById('knotsContainer');
+      const knotCount = document.getElementById('knotCount');
+      const noResults = document.getElementById('noResults');
+      const modal = document.getElementById('knotModal');
+      const closeModal = document.getElementById('closeModal');
+
+      // State
+      let filteredKnots = [...fishingKnots];
+
+      // Utility Functions
+      function getDifficultyColor(difficulty) {
+        switch(difficulty) {
+          case 'Easy': return 'bg-green-100 text-green-800';
+          case 'Medium': return 'bg-yellow-100 text-yellow-800';
+          case 'Hard': return 'bg-red-100 text-red-800';
+          default: return 'bg-gray-100 text-gray-800';
+        }
+      }
+
+      function getStrengthColor(strength) {
+        switch(strength) {
+          case 'High': return 'bg-green-100 text-green-800';
+          case 'Medium': return 'bg-yellow-100 text-yellow-800';
+          case 'Low': return 'bg-red-100 text-red-800';
+          default: return 'bg-gray-100 text-gray-800';
+        }
+      }
+
+      function getTagDisplay(tag) {
+        const tagMap = {
+          'hook': 'Hook Attachment',
+          'lure': 'Lure Connection',
+          'swivel': 'Swivel Connection',
+          'line-to-line': 'Line to Line',
+          'loop': 'Loop Formation',
+          'braid-to-mono': 'Braid to Mono',
+          'braid-to-fluoro': 'Braid to Fluoro',
+          'leader': 'Leader Connection',
+          'beginner-friendly': 'Beginner Friendly',
+          'versatile': 'Versatile',
+          'strong': 'High Strength',
+          'quick-tie': 'Quick to Tie',
+          'fly-fishing': 'Fly Fishing',
+          'similar-diameter': 'Similar Diameter',
+          'reliable': 'Reliable',
+          'action-preserving': 'Preserves Action',
+          'different-diameter': 'Different Diameter',
+          'double-line': 'Double Line',
+          'offshore': 'Offshore Fishing',
+          'direct-tie': 'Direct Tie',
+          'wire': 'Wire Leader',
+          'toothy-fish': 'Toothy Fish',
+          'multiple-hooks': 'Multiple Hooks',
+          'bottom-fishing': 'Bottom Fishing',
+          'reel': 'Reel Attachment',
+          'backing': 'Backing Line',
+          'spool': 'Spool Connection',
+          'connection': 'Connection',
+          'quick-change': 'Quick Change',
+          'small': 'Compact',
+          'mono': 'Monofilament',
+          'braid': 'Braided Line'
+        };
+        return tagMap[tag] || tag;
+      }
+
+      // Render Functions
+      function renderKnot(knot) {
+        return `
+          <div class="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow cursor-pointer knot-card" data-knot-id="${knot.id}">
+            <div class="p-6">
+              <h3 class="text-lg font-semibold text-gray-800 mb-3">${knot.name}</h3>
+
+              <div class="space-y-3 mb-4">
+                <div class="flex items-center justify-between">
+                  <span class="text-sm text-gray-600">Difficulty:</span>
+                  <span class="px-2 py-1 rounded-full text-xs font-medium ${getDifficultyColor(knot.difficulty)}">
+                    ${knot.difficulty}
+                  </span>
+                </div>
+
+                <div class="flex items-center justify-between">
+                  <span class="text-sm text-gray-600">Strength:</span>
+                  <span class="px-2 py-1 rounded-full text-xs font-medium ${getStrengthColor(knot.strength)}">
+                    ${knot.strength}
+                  </span>
+                </div>
+              </div>
+
+              <div class="mb-4">
+                <p class="text-sm text-gray-600 line-clamp-3">${knot.description}</p>
+              </div>
+
+              <div class="flex flex-wrap gap-1 mb-4">
+                ${knot.tags.slice(0, 3).map(tag =>
+                  `<span class="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded-full">${getTagDisplay(tag)}</span>`
+                ).join('')}
+                ${knot.tags.length > 3 ? `<span class="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded-full">+${knot.tags.length - 3}</span>` : ''}
+              </div>
+
+              <button class="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition-colors flex items-center justify-center gap-2">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M10 12l-6-6 1.41-1.41L10 9.17l4.59-4.58L16 6l-6 6z"/>
+                </svg>
+                Watch Tutorial
+              </button>
+            </div>
+          </div>
+        `;
+      }
+
+      function renderKnots() {
+        if (filteredKnots.length === 0) {
+          knotsContainer.innerHTML = '';
+          knotCount.textContent = '';
+          noResults.classList.remove('hidden');
+          return;
+        }
+
+        noResults.classList.add('hidden');
+        knotCount.textContent = `Showing ${filteredKnots.length} of ${fishingKnots.length} knots`;
+        knotsContainer.innerHTML = filteredKnots.map(renderKnot).join('');
+
+        // Add click event listeners to knot cards
+        document.querySelectorAll('.knot-card').forEach(card => {
+          card.addEventListener('click', () => {
+            const knotId = parseInt(card.dataset.knotId);
+            const knot = fishingKnots.find(k => k.id === knotId);
+            openModal(knot);
+          });
+        });
+      }
+
+      // Modal Functions
+      function openModal(knot) {
+        document.getElementById('modalTitle').textContent = knot.name;
+        document.getElementById('modalDifficulty').textContent = knot.difficulty;
+        document.getElementById('modalDifficulty').className = `inline-block px-3 py-1 rounded-full text-sm font-medium ${getDifficultyColor(knot.difficulty)}`;
+
+        document.getElementById('modalStrength').textContent = knot.strength;
+        document.getElementById('modalStrength').className = `inline-block px-3 py-1 rounded-full text-sm font-medium ${getStrengthColor(knot.strength)}`;
+
+        document.getElementById('modalTags').innerHTML = knot.tags.map(tag =>
+          `<span class="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded-full">${getTagDisplay(tag)}</span>`
+        ).join('');
+
+        document.getElementById('modalDescription').textContent = knot.description;
+
+        // Set YouTube embed URL
+        const videoUrl = `https://www.youtube.com/embed/${knot.videoId}?autoplay=1&rel=0`;
+        document.getElementById('modalVideo').src = videoUrl;
+
+        modal.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeModalFunction() {
+        modal.classList.add('hidden');
+        document.body.style.overflow = 'auto';
+        // Stop video playback
+        document.getElementById('modalVideo').src = '';
+      }
+
+      // Filter Functions
+      function filterKnots() {
+        const searchTerm = searchInput.value.toLowerCase();
+        const difficultyValue = difficultyFilter.value;
+        const strengthValue = strengthFilter.value;
+        const tagValue = tagFilter.value;
+
+        filteredKnots = fishingKnots.filter(knot => {
+          const matchesSearch = !searchTerm ||
+            knot.name.toLowerCase().includes(searchTerm) ||
+            knot.description.toLowerCase().includes(searchTerm) ||
+            knot.tags.some(tag => getTagDisplay(tag).toLowerCase().includes(searchTerm)) ||
+            knot.difficulty.toLowerCase().includes(searchTerm) ||
+            knot.strength.toLowerCase().includes(searchTerm);
+
+          const matchesDifficulty = !difficultyValue || knot.difficulty === difficultyValue;
+          const matchesStrength = !strengthValue || knot.strength === strengthValue;
+          const matchesTag = !tagValue || knot.tags.includes(tagValue);
+
+          return matchesSearch && matchesDifficulty && matchesStrength && matchesTag;
+        });
+
+        renderKnots();
+      }
+
+      function clearFilters() {
+        searchInput.value = '';
+        difficultyFilter.value = '';
+        strengthFilter.value = '';
+        tagFilter.value = '';
+        filteredKnots = [...fishingKnots];
+        renderKnots();
+      }
+
+      // Event Listeners
+      searchInput.addEventListener('input', filterKnots);
+      difficultyFilter.addEventListener('change', filterKnots);
+      strengthFilter.addEventListener('change', filterKnots);
+      tagFilter.addEventListener('change', filterKnots);
+      clearFiltersBtn.addEventListener('click', clearFilters);
+      closeModal.addEventListener('click', closeModalFunction);
+
+      // Close modal when clicking outside
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+          closeModalFunction();
+        }
+      });
+
+      // Close modal with Escape key
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+          closeModalFunction();
+        }
+      });
+
+      // Initialize
+      renderKnots();
+
+      // Add some CSS for line clamping
+      const style = document.createElement('style');
+      style.textContent = `
+        .line-clamp-3 {
+          display: -webkit-box;
+          -webkit-line-clamp: 3;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+        }
+      `;
+      document.head.appendChild(style);
+    </script>
   </body>
 </html>
