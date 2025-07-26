@@ -533,7 +533,7 @@
       }
 
       // Modal Functions
-      function openModal(knot) {
+      function openModal(knot, updateHash = true) {
         document.getElementById('modalTitle').textContent = knot.name;
         document.getElementById('modalDifficulty').textContent = knot.difficulty;
         document.getElementById('modalDifficulty').className = `inline-block px-3 py-1 rounded-full text-sm font-medium ${getDifficultyColor(knot.difficulty)}`;
@@ -553,13 +553,42 @@
 
         modal.classList.remove('hidden');
         document.body.style.overflow = 'hidden';
+
+        // Update URL hash
+        if (updateHash) {
+          window.history.pushState(null, null, `#knot-${knot.id}`);
+        }
       }
 
-      function closeModalFunction() {
+      function closeModalFunction(updateHash = true) {
         modal.classList.add('hidden');
         document.body.style.overflow = 'auto';
         // Stop video playback
         document.getElementById('modalVideo').src = '';
+
+        // Update URL hash
+        if (updateHash) {
+          window.history.pushState(null, null, window.location.pathname);
+        }
+      }
+
+      // URL Hash Functions
+      function getKnotFromHash() {
+        const hash = window.location.hash;
+        if (hash.startsWith('#knot-')) {
+          const knotId = parseInt(hash.replace('#knot-', ''));
+          return fishingKnots.find(k => k.id === knotId);
+        }
+        return null;
+      }
+
+      function handleHashChange() {
+        const knot = getKnotFromHash();
+        if (knot) {
+          openModal(knot, false);
+        } else {
+          closeModalFunction(false);
+        }
       }
 
       // Filter Functions
@@ -618,8 +647,23 @@
         }
       });
 
+      // Handle hash changes for browser navigation
+      window.addEventListener('hashchange', handleHashChange);
+      window.addEventListener('popstate', handleHashChange);
+
       // Initialize
       renderKnots();
+
+      // Check for hash on page load and open modal if needed
+      function initializeFromHash() {
+        const knot = getKnotFromHash();
+        if (knot) {
+          openModal(knot, false);
+        }
+      }
+
+      // Since script is at bottom of body, DOM should be ready
+      initializeFromHash();
 
       // Add some CSS for line clamping
       const style = document.createElement('style');
