@@ -232,8 +232,8 @@
               <button id="performSearch" class="flex-1 bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition-colors">
                 Search
               </button>
-              <button id="clearSearchFilters" class="flex-1 bg-gray-500 text-white py-2 px-4 rounded-md hover:bg-gray-600 transition-colors">
-                Clear Filters
+              <button id="cancelSearch" class="flex-1 bg-gray-500 text-white py-2 px-4 rounded-md hover:bg-gray-600 transition-colors">
+                Cancel
               </button>
             </div>
           </div>
@@ -435,7 +435,7 @@
       const strengthFilter = document.getElementById('modalStrengthFilter');
       const tagFilter = document.getElementById('modalTagFilter');
       const performSearchBtn = document.getElementById('performSearch');
-      const clearFiltersBtn = document.getElementById('clearSearchFilters');
+      const cancelSearchBtn = document.getElementById('cancelSearch');
       const knotsContainer = document.getElementById('knotsContainer');
       const knotCount = document.getElementById('knotCount');
       const activeFilters = document.getElementById('activeFilters');
@@ -768,7 +768,7 @@
         filterKnots();
         closeSearchModal();
       });
-      clearFiltersBtn.addEventListener('click', clearFilters);
+      cancelSearchBtn.addEventListener('click', closeSearchModal);
       closeModal.addEventListener('click', closeModalFunction);
 
       // Allow Enter key to perform search in modal
