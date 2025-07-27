@@ -10,6 +10,13 @@
 
   <!-- Individual Knot Pages -->
   <url>
+    <loc>https://fishingknots101.com/#speed-blood-knot</loc>
+    <lastmod>2025-01-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
     <loc>https://fishingknots101.com/#improved-clinch-knot</loc>
     <lastmod>2025-01-11</lastmod>
     <changefreq>monthly</changefreq>
