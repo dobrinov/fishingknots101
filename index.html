@@ -310,17 +310,9 @@
 
             <!-- Language Selector -->
             <nav aria-label="Language selection">
-              <select id="languageSelector" class="bg-white border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" aria-label="Choose language">
-                <option value="en">English</option>
-                <option value="bg">Български</option>
-                <option value="de">Deutsch</option>
-                <option value="fr">Français</option>
-                <option value="es">Español</option>
-                <option value="zh">中文</option>
-                <option value="ja">日本语</option>
-                <option value="ru">Русский</option>
-                <option value="el">Ελληνικά</option>
-              </select>
+              <button id="languageFlag" class="hover:bg-white border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 bg-gray-50 transition-colors flex items-center gap-2 cursor-pointer" aria-label="Choose language">
+                <span id="currentLanguageFlag" class="text-lg">🇺🇸</span>
+              </button>
             </nav>
           </div>
         </div>
@@ -586,6 +578,59 @@
       </div>
     </div>
 
+    <!-- Language Modal -->
+    <div id="languageModal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 flex items-center justify-center p-4">
+      <div class="bg-white rounded-lg max-w-md w-full max-h-[90vh] overflow-auto">
+        <div class="flex justify-between items-center px-6 py-4 border-b">
+          <h2 class="text-xl font-bold text-gray-800" data-translate="language-modal-title">Choose Language</h2>
+          <button id="closeLanguageModal" class="text-gray-500 hover:text-gray-700 text-2xl font-bold" aria-label="Close language modal">
+            &times;
+          </button>
+        </div>
+
+        <div class="p-6">
+          <div class="grid grid-cols-1 gap-3">
+            <button class="language-option flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors text-left w-full" data-lang="en">
+              <span class="text-2xl">🇺🇸</span>
+              <span class="font-medium">English</span>
+            </button>
+            <button class="language-option flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors text-left w-full" data-lang="bg">
+              <span class="text-2xl">🇧🇬</span>
+              <span class="font-medium">Български</span>
+            </button>
+            <button class="language-option flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors text-left w-full" data-lang="de">
+              <span class="text-2xl">🇩🇪</span>
+              <span class="font-medium">Deutsch</span>
+            </button>
+            <button class="language-option flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors text-left w-full" data-lang="fr">
+              <span class="text-2xl">🇫🇷</span>
+              <span class="font-medium">Français</span>
+            </button>
+            <button class="language-option flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors text-left w-full" data-lang="es">
+              <span class="text-2xl">🇪🇸</span>
+              <span class="font-medium">Español</span>
+            </button>
+            <button class="language-option flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors text-left w-full" data-lang="zh">
+              <span class="text-2xl">🇨🇳</span>
+              <span class="font-medium">中文</span>
+            </button>
+            <button class="language-option flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors text-left w-full" data-lang="ja">
+              <span class="text-2xl">🇯🇵</span>
+              <span class="font-medium">日本语</span>
+            </button>
+            <button class="language-option flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors text-left w-full" data-lang="ru">
+              <span class="text-2xl">🇷🇺</span>
+              <span class="font-medium">Русский</span>
+            </button>
+            <button class="language-option flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors text-left w-full" data-lang="el">
+              <span class="text-2xl">🇬🇷</span>
+              <span class="font-medium">Ελληνικά</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <script>
       // Language system
       let currentLanguage = 'en';
@@ -656,7 +701,8 @@
           'filter-difficulty': 'Difficulty: {value}',
           'filter-strength': 'Strength: {value}',
           'filter-use-case': 'Use Case: {value}',
-          'auto-detected': 'Auto-detected'
+          'auto-detected': 'Auto-detected',
+          'language-modal-title': 'Choose Language'
         },
         bg: {
           'site-title': 'Риболовни възли',
@@ -723,7 +769,8 @@
           'filter-difficulty': 'Трудност: {value}',
           'filter-strength': 'Якост: {value}',
           'filter-use-case': 'Приложение: {value}',
-          'auto-detected': 'Автоматично открит'
+          'auto-detected': 'Автоматично открит',
+          'language-modal-title': 'Избери език'
         },
         de: {
           'site-title': 'Angelknoten',
@@ -790,7 +837,8 @@
           'filter-difficulty': 'Schwierigkeit: {value}',
           'filter-strength': 'Stärke: {value}',
           'filter-use-case': 'Anwendungsfall: {value}',
-          'auto-detected': 'Automatisch erkannt'
+          'auto-detected': 'Automatisch erkannt',
+          'language-modal-title': 'Sprache wählen'
         },
         fr: {
           'site-title': 'Nœuds de Pêche',
@@ -857,7 +905,8 @@
           'filter-difficulty': 'Difficulté : {value}',
           'filter-strength': 'Résistance : {value}',
           'filter-use-case': 'Cas d\'Usage : {value}',
-          'auto-detected': 'Détecté automatiquement'
+          'auto-detected': 'Détecté automatiquement',
+          'language-modal-title': 'Choisir la langue'
         },
         es: {
           'site-title': 'Nudos de Pesca',
@@ -924,7 +973,8 @@
           'filter-difficulty': 'Dificultad: {value}',
           'filter-strength': 'Resistencia: {value}',
           'filter-use-case': 'Caso de Uso: {value}',
-          'auto-detected': 'Detectado automáticamente'
+          'auto-detected': 'Detectado automáticamente',
+          'language-modal-title': 'Elegir idioma'
         },
         zh: {
           'site-title': '钓鱼结',
@@ -991,7 +1041,8 @@
           'filter-difficulty': '难度：{value}',
           'filter-strength': '强度：{value}',
           'filter-use-case': '使用场景：{value}',
-          'auto-detected': '自动检测'
+          'auto-detected': '自动检测',
+          'language-modal-title': '选择语言'
         },
         ja: {
           'site-title': '釣り結び',
@@ -1058,7 +1109,8 @@
           'filter-difficulty': '難易度：{value}',
           'filter-strength': '強度：{value}',
           'filter-use-case': '使用例：{value}',
-          'auto-detected': '自動検出'
+          'auto-detected': '自動検出',
+          'language-modal-title': '言語を選択'
         },
         ru: {
           'site-title': 'Рыболовные узлы',
@@ -1125,7 +1177,8 @@
           'filter-difficulty': 'Сложность: {value}',
           'filter-strength': 'Прочность: {value}',
           'filter-use-case': 'Случай использования: {value}',
-          'auto-detected': 'Автоматически обнаружен'
+          'auto-detected': 'Автоматически обнаружен',
+          'language-modal-title': 'Выберите язык'
         },
         el: {
           'site-title': 'Κόμποι Ψαρέματος',
@@ -1192,7 +1245,8 @@
           'filter-difficulty': 'Δυσκολία: {value}',
           'filter-strength': 'Αντοχή: {value}',
           'filter-use-case': 'Περίπτωση Χρήσης: {value}',
-          'auto-detected': 'Αυτόματα ανιχνεύθηκε'
+          'auto-detected': 'Αυτόματα ανιχνεύθηκε',
+          'language-modal-title': 'Επιλέξτε γλώσσα'
         }
       };
 
@@ -1475,7 +1529,9 @@
       ];
 
       // DOM Elements
-      const languageSelector = document.getElementById('languageSelector');
+      const languageFlag = document.getElementById('languageFlag');
+      const languageModal = document.getElementById('languageModal');
+      const closeLanguageModalBtn = document.getElementById('closeLanguageModal');
       const openSearchModalBtn = document.getElementById('openSearchModal');
       const searchModal = document.getElementById('searchModal');
       const closeSearchModalBtn = document.getElementById('closeSearchModal');
@@ -1496,6 +1552,28 @@
       let filteredKnots = [...fishingKnots];
 
       // Language Functions
+      function getLanguageFlag(langCode) {
+        const flags = {
+          'en': '🇺🇸',
+          'bg': '🇧🇬',
+          'de': '🇩🇪',
+          'fr': '🇫🇷',
+          'es': '🇪🇸',
+          'zh': '🇨🇳',
+          'ja': '🇯🇵',
+          'ru': '🇷🇺',
+          'el': '🇬🇷'
+        };
+        return flags[langCode] || '🇺🇸';
+      }
+
+      function updateCurrentLanguageFlag() {
+        const currentFlag = document.getElementById('currentLanguageFlag');
+        if (currentFlag) {
+          currentFlag.textContent = getLanguageFlag(currentLanguage);
+        }
+      }
+
       function translateText(key, replacements = {}) {
         let text = translations[currentLanguage][key] || key;
         Object.keys(replacements).forEach(placeholder => {
@@ -1522,6 +1600,9 @@
 
         // Update SEO meta tags
         updateSEOTags();
+
+        // Update current flag display
+        updateCurrentLanguageFlag();
 
         // Update URL
         const url = new URL(window.location);
@@ -1679,7 +1760,6 @@
           }
         }
 
-                languageSelector.value = currentLanguage;
         updatePageLanguage();
 
         // Show auto-detection indicator if language was detected
@@ -2000,6 +2080,17 @@
         renderKnots();
       }
 
+      // Language Modal Functions
+      function openLanguageModal() {
+        languageModal.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeLanguageModal() {
+        languageModal.classList.add('hidden');
+        document.body.style.overflow = 'auto';
+      }
+
       // Search Modal Functions
       function openSearchModal() {
         searchModal.classList.remove('hidden');
@@ -2014,22 +2105,32 @@
       }
 
                   // Event Listeners
-      languageSelector.addEventListener('change', (e) => {
-        currentLanguage = e.target.value;
+      languageFlag.addEventListener('click', openLanguageModal);
+      closeLanguageModalBtn.addEventListener('click', closeLanguageModal);
 
-        // Save user's language preference
-        const saved = saveLanguagePreference(currentLanguage);
+      // Add event listeners to all language options
+      document.querySelectorAll('.language-option').forEach(option => {
+        option.addEventListener('click', (e) => {
+          const selectedLang = e.currentTarget.dataset.lang;
+          if (selectedLang && translations[selectedLang]) {
+            currentLanguage = selectedLang;
 
-        // Hide auto-detection indicator when user manually changes language
-        const indicator = document.getElementById('languageIndicator');
-        if (indicator) {
-          indicator.classList.add('hidden');
-        }
+            // Save user's language preference
+            const saved = saveLanguagePreference(currentLanguage);
 
-        updatePageLanguage();
+            // Hide auto-detection indicator when user manually changes language
+            const indicator = document.getElementById('languageIndicator');
+            if (indicator) {
+              indicator.classList.add('hidden');
+            }
 
-        // Log language change for debugging
-        console.log(`Language changed to: ${currentLanguage} (saved: ${saved ? 'yes' : 'no'})`);
+            updatePageLanguage();
+            closeLanguageModal();
+
+            // Log language change for debugging
+            console.log(`Language changed to: ${currentLanguage} (saved: ${saved ? 'yes' : 'no'})`);
+          }
+        });
       });
 
       openSearchModalBtn.addEventListener('click', openSearchModal);
@@ -2056,6 +2157,13 @@
         }
       });
 
+      // Close language modal when clicking outside
+      languageModal.addEventListener('click', (e) => {
+        if (e.target === languageModal) {
+          closeLanguageModal();
+        }
+      });
+
       // Close search modal when clicking outside
       searchModal.addEventListener('click', (e) => {
         if (e.target === searchModal) {
@@ -2068,6 +2176,8 @@
         if (e.key === 'Escape') {
           if (!modal.classList.contains('hidden')) {
             closeModalFunction();
+          } else if (!languageModal.classList.contains('hidden')) {
+            closeLanguageModal();
           } else if (!searchModal.classList.contains('hidden')) {
             closeSearchModal();
           }
