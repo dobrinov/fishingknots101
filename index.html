@@ -74,78 +74,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
-    <!-- FAQ Structured Data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "What are the most important fishing knots to learn?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "The essential knots every angler should master are the Improved Clinch Knot (for hooks), Palomar Knot (for braided line), Surgeon's Knot (joining lines), and FG Knot (braid to leader connections). These four knots will cover 90% of your fishing situations."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How do I choose the right knot for my fishing situation?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Consider your line type (mono, fluoro, or braid), what you're connecting (hook, lure, or leader), and the fish species you're targeting. Our search and filter tools help you find the perfect knot based on difficulty, strength, and use case."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Why do some knots work better with braided line?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Braided line is slippery and lacks the stretch of monofilament, so it requires knots that grip well and won't slip. The Palomar Knot and Uni Knot are excellent choices for braid because they create multiple contact points and hold securely."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How can I improve my knot tying technique?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Practice with the video tutorials, wet your line before tightening (saliva works great), pull slowly and steadily, and always test your knots before fishing. Start with easier knots and gradually work up to more complex ones as your skills improve."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What's the difference between knot strength ratings?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Knot strength refers to how much of the line's original strength the knot retains. High-strength knots retain 85-95% of line strength, medium retain 70-85%, and low retain 60-70%. Choose stronger knots for larger fish and critical connections."
-          }
-        }
-      ]
-    }
-    </script>
-
-    <!-- Breadcrumb Structured Data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://fishingknots101.com"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Fishing Knots Guide",
-          "item": "https://fishingknots101.com"
-        }
-      ]
-    }
-    </script>
-
     <!-- Article/Guide Structured Data -->
     <script type="application/ld+json">
     {
@@ -1846,7 +1774,6 @@
           return true;
         } catch (e) {
           // localStorage might be disabled or full
-          console.warn('Could not save language preference:', e);
           return false;
         }
       }
@@ -1856,7 +1783,6 @@
           return localStorage.getItem('fishing-knots-language');
         } catch (e) {
           // localStorage might be disabled
-          console.warn('Could not retrieve language preference:', e);
           return null;
         }
       }
@@ -2097,7 +2023,7 @@
 
         // Set YouTube embed URL
         const videoUrl = `https://www.youtube.com/embed/${knot.videoId}?autoplay=1&rel=0&t=${knot.time ?? 0}`;
-        console.log(videoUrl);
+
         document.getElementById('modalVideo').src = videoUrl;
 
         modal.classList.remove('hidden');
@@ -2237,13 +2163,14 @@
       function handleHashChange() {
         const result = getKnotFromHash();
 
-        // Handle language change from URL (even without a knot)
+        // Handle language change from URL (with or without a knot)
         if (result && result.language && result.language !== currentLanguage) {
           currentLanguage = result.language;
           saveLanguagePreference(currentLanguage);
           updatePageLanguage();
         }
 
+        // Handle knot display
         if (result && result.knot) {
           openModal(result.knot, false);
         } else {
@@ -2328,9 +2255,6 @@
 
             updatePageLanguage();
             closeLanguageModal();
-
-            // Log language change for debugging
-            console.log(`Language changed to: ${currentLanguage} (saved: ${saved ? 'yes' : 'no'})`);
           }
         });
       });
@@ -2400,21 +2324,40 @@
         }
       });
 
+      // Additional URL monitoring for manual URL changes
+      let lastUrl = window.location.href;
+      function checkForUrlChanges() {
+        const currentUrl = window.location.href;
+        if (currentUrl !== lastUrl) {
+          lastUrl = currentUrl;
+          const urlLanguage = getLanguageFromUrl();
+          if (urlLanguage && urlLanguage !== currentLanguage) {
+            currentLanguage = urlLanguage;
+            saveLanguagePreference(currentLanguage);
+            updatePageLanguage();
+          }
+        }
+      }
+
+      // Check for URL changes periodically (fallback for edge cases)
+      setInterval(checkForUrlChanges, 500);
+
       // Initialize
       initializeLanguage();
       renderKnots();
 
-      // Check for hash on page load and open modal if needed
+      // Check for hash on page load and handle language/knot
       function initializeFromHash() {
         const result = getKnotFromHash();
 
-        // Handle language change from URL (even without a knot)
+        // Handle language change from initial URL (with or without a knot)
         if (result && result.language && result.language !== currentLanguage) {
           currentLanguage = result.language;
           saveLanguagePreference(currentLanguage);
           updatePageLanguage();
         }
 
+        // Handle knot display
         if (result && result.knot) {
           openModal(result.knot, false);
         }
