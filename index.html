@@ -25,14 +25,14 @@
 
     <!-- Hreflang Tags for Multilingual SEO -->
     <link rel="alternate" hreflang="en" href="https://fishingknots101.com/" />
-    <link rel="alternate" hreflang="bg" href="https://fishingknots101.com/?lang=bg" />
-    <link rel="alternate" hreflang="de" href="https://fishingknots101.com/?lang=de" />
-    <link rel="alternate" hreflang="fr" href="https://fishingknots101.com/?lang=fr" />
-    <link rel="alternate" hreflang="es" href="https://fishingknots101.com/?lang=es" />
-    <link rel="alternate" hreflang="zh" href="https://fishingknots101.com/?lang=zh" />
-    <link rel="alternate" hreflang="ja" href="https://fishingknots101.com/?lang=ja" />
-    <link rel="alternate" hreflang="ru" href="https://fishingknots101.com/?lang=ru" />
-    <link rel="alternate" hreflang="el" href="https://fishingknots101.com/?lang=el" />
+    <link rel="alternate" hreflang="bg" href="https://fishingknots101.com/#bg" />
+    <link rel="alternate" hreflang="de" href="https://fishingknots101.com/#de" />
+    <link rel="alternate" hreflang="fr" href="https://fishingknots101.com/#fr" />
+    <link rel="alternate" hreflang="es" href="https://fishingknots101.com/#es" />
+    <link rel="alternate" hreflang="zh" href="https://fishingknots101.com/#zh" />
+    <link rel="alternate" hreflang="ja" href="https://fishingknots101.com/#ja" />
+    <link rel="alternate" hreflang="ru" href="https://fishingknots101.com/#ru" />
+    <link rel="alternate" hreflang="el" href="https://fishingknots101.com/#el" />
     <link rel="alternate" hreflang="x-default" href="https://fishingknots101.com/" />
     <meta name="author" content="Fishing Knots 101" />
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
@@ -1773,21 +1773,30 @@
         // Update current flag display
         updateCurrentLanguageFlag();
 
-        // Update URL
-        const url = new URL(window.location);
-        if (currentLanguage === 'en') {
-          url.searchParams.delete('lang');
+        // Update URL hash to reflect language change
+        const { knotSlug } = parseHashUrl();
+        if (knotSlug) {
+          // If we're viewing a knot, update the hash to include/exclude language
+          const newHash = currentLanguage === 'en' ? `#${knotSlug}` : `#${currentLanguage}/${knotSlug}`;
+          window.history.replaceState(null, null, newHash);
         } else {
-          url.searchParams.set('lang', currentLanguage);
+          // If we're on the home page, just clear any query parameters for clean URL
+          const url = new URL(window.location);
+          url.search = '';
+          window.history.replaceState(null, null, url);
         }
-        window.history.replaceState(null, null, url);
 
-        // Re-render knots to update their content
+        // Re-render knots to update their content and URLs with new language
         renderKnots();
       }
 
       function updateSEOTags() {
-        const currentUrl = window.location.origin + window.location.pathname + (currentLanguage !== 'en' ? `?lang=${currentLanguage}` : '');
+        // Build current URL with hash-based language structure
+        const { knotSlug } = parseHashUrl();
+        let currentUrl = window.location.origin + window.location.pathname;
+        if (knotSlug) {
+          currentUrl += currentLanguage === 'en' ? `#${knotSlug}` : `#${currentLanguage}/${knotSlug}`;
+        }
 
         // Update page title
         document.title = translateText('page-title');
@@ -1857,23 +1866,29 @@
         const langParam = urlParams.get('lang');
         const savedLanguage = getLanguagePreference();
 
-        // Priority order: URL parameter > Saved preference > Default (English)
-        if (langParam && translations[langParam]) {
-          // URL parameter takes highest priority
-          currentLanguage = langParam;
+        // Check if language is in the hash using new URL structure
+        const { language: hashLang } = parseHashUrl();
 
-          // Save URL language as new preference
+        // Priority order: Hash language > URL parameter > Saved preference > Default (English)
+        if (hashLang && translations[hashLang]) {
+          // Hash language takes highest priority
+          currentLanguage = hashLang;
+          if (hashLang !== 'en' || !savedLanguage) {
+            saveLanguagePreference(hashLang);
+          }
+          // Update URL to clean format if needed
+          updateUrlForLanguage(hashLang);
+        } else if (langParam && translations[langParam]) {
+          // URL parameter takes second priority (for backward compatibility)
+          currentLanguage = langParam;
           saveLanguagePreference(langParam);
+          // Convert query param to hash-based URL for consistency
+          convertQueryParamToHash(langParam);
         } else if (savedLanguage && translations[savedLanguage]) {
           // Use saved language preference
           currentLanguage = savedLanguage;
-
-          // Update URL to reflect saved language (but don't show 'en' in URL)
-          if (savedLanguage !== 'en') {
-            const url = new URL(window.location);
-            url.searchParams.set('lang', savedLanguage);
-            window.history.replaceState(null, null, url);
-          }
+          // Update URL to reflect saved language if no URL language is specified
+          updateUrlForLanguage(savedLanguage);
         } else {
           // Default to English
           currentLanguage = 'en';
@@ -2002,8 +2017,11 @@
 
       // Render Functions
       function renderKnot(knot) {
+        const knotSlug = slugify(knot.name);
+        const knotUrl = currentLanguage === 'en' ? `#${knotSlug}` : `#${currentLanguage}/${knotSlug}`;
+
         return `
-          <div class="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow cursor-pointer knot-card" data-knot-id="${knot.id}">
+          <a href="${knotUrl}" class="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow block knot-card" data-knot-id="${knot.id}">
             <div class="p-6 flex flex-col h-full">
               <div class="flex-grow">
                 <h3 class="text-lg font-semibold text-gray-800 mb-3">${getKnotName(knot)}</h3>
@@ -2036,11 +2054,11 @@
                 </div>
               </div>
 
-              <button class="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition-colors flex items-center justify-center gap-2 cursor-pointer">
+              <span class="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition-colors flex items-center justify-center gap-2 cursor-pointer">
                 ${translateText('watch-tutorial')}
-              </button>
+              </span>
             </div>
-          </div>
+          </a>
         `;
       }
 
@@ -2060,15 +2078,6 @@
         });
         knotsContainer.innerHTML = filteredKnots.map(renderKnot).join('');
         renderActiveFilters();
-
-        // Add click event listeners to knot cards
-        document.querySelectorAll('.knot-card').forEach(card => {
-          card.addEventListener('click', () => {
-            const knotId = parseInt(card.dataset.knotId);
-            const knot = fishingKnots.find(k => k.id === knotId);
-            openModal(knot);
-          });
-        });
       }
 
       // Modal Functions
@@ -2096,7 +2105,9 @@
 
         // Update URL hash
         if (updateHash) {
-          window.history.pushState(null, null, `#${slugify(knot.name)}`);
+          const knotSlug = slugify(knot.name);
+          const newHash = currentLanguage === 'en' ? `#${knotSlug}` : `#${currentLanguage}/${knotSlug}`;
+          window.history.pushState(null, null, newHash);
         }
       }
 
@@ -2122,19 +2133,119 @@
           .trim();
       }
 
-      function getKnotFromHash() {
+      function parseHashUrl() {
         const hash = window.location.hash;
-        if (hash.startsWith('#')) {
-          const knotSlug = hash.replace('#', '');
-          return fishingKnots.find(k => slugify(k.name) === knotSlug);
+        if (!hash || hash === '#') {
+          return { language: null, knotSlug: null };
         }
+
+        // Remove the # and split by /
+        const path = hash.substring(1);
+        const segments = path.split('/').filter(segment => segment.length > 0);
+
+        if (segments.length === 0) {
+          return { language: null, knotSlug: null };
+        }
+
+        // Check if first segment is a language
+        if (translations[segments[0]]) {
+          if (segments.length >= 2) {
+            // Language with knot: #es/improved-clinch-knot
+            return { language: segments[0], knotSlug: segments[1] };
+          } else {
+            // Language only: #es/
+            return { language: segments[0], knotSlug: null };
+          }
+        }
+
+        // Check if first segment is a knot (no language specified)
+        if (segments.length === 1) {
+          return { language: null, knotSlug: segments[0] };
+        }
+
+        // If first segment is not a language but we have 2+ segments, treat first as knot
+        return { language: null, knotSlug: segments[0] };
+      }
+
+      // Helper function to update URL for language consistency
+      function updateUrlForLanguage(language) {
+        const { knotSlug } = parseHashUrl();
+        const currentUrl = new URL(window.location);
+
+        // Remove lang query parameter if it exists
+        currentUrl.searchParams.delete('lang');
+
+        // Update hash based on language and current knot
+        if (knotSlug) {
+          currentUrl.hash = language === 'en' ? `#${knotSlug}` : `#${language}/${knotSlug}`;
+        } else {
+          currentUrl.hash = language === 'en' ? '' : `#${language}`;
+        }
+
+        // Update URL without page reload
+        window.history.replaceState(null, '', currentUrl.toString());
+      }
+
+      // Helper function to convert query parameter to hash-based URL
+      function convertQueryParamToHash(language) {
+        const { knotSlug } = parseHashUrl();
+        const currentUrl = new URL(window.location);
+
+        // Remove lang query parameter
+        currentUrl.searchParams.delete('lang');
+
+        // Set hash based on language and current knot
+        if (knotSlug) {
+          currentUrl.hash = language === 'en' ? `#${knotSlug}` : `#${language}/${knotSlug}`;
+        } else {
+          currentUrl.hash = language === 'en' ? '' : `#${language}`;
+        }
+
+        // Update URL without page reload
+        window.history.replaceState(null, '', currentUrl.toString());
+      }
+
+      // Enhanced function to get language from any URL format
+      function getLanguageFromUrl() {
+        // First check hash-based language
+        const { language: hashLang } = parseHashUrl();
+        if (hashLang && translations[hashLang]) {
+          return hashLang;
+        }
+
+        // Then check query parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        const langParam = urlParams.get('lang');
+        if (langParam && translations[langParam]) {
+          return langParam;
+        }
+
         return null;
       }
 
+      function getKnotFromHash() {
+        const { language, knotSlug } = parseHashUrl();
+
+        if (!knotSlug) {
+          return { knot: null, language: language };
+        }
+
+        const knot = fishingKnots.find(k => slugify(k.name) === knotSlug);
+        return { knot: knot, language: language };
+      }
+
       function handleHashChange() {
-        const knot = getKnotFromHash();
-        if (knot) {
-          openModal(knot, false);
+        const result = getKnotFromHash();
+
+        // Handle language change from URL (even without a knot)
+        if (result && result.language && result.language !== currentLanguage) {
+          currentLanguage = result.language;
+          saveLanguagePreference(currentLanguage);
+          updatePageLanguage();
+        }
+
+        if (result && result.knot) {
+          openModal(result.knot, false);
         } else {
           closeModalFunction(false);
         }
@@ -2212,7 +2323,8 @@
             // Save user's language preference
             const saved = saveLanguagePreference(currentLanguage);
 
-
+            // Update URL to reflect language change
+            updateUrlForLanguage(currentLanguage);
 
             updatePageLanguage();
             closeLanguageModal();
@@ -2278,32 +2390,38 @@
       window.addEventListener('hashchange', handleHashChange);
       window.addEventListener('popstate', handleHashChange);
 
+      // Handle browser navigation for language changes
+      window.addEventListener('popstate', function(event) {
+        const urlLanguage = getLanguageFromUrl();
+        if (urlLanguage && urlLanguage !== currentLanguage) {
+          currentLanguage = urlLanguage;
+          saveLanguagePreference(currentLanguage);
+          updatePageLanguage();
+        }
+      });
+
       // Initialize
       initializeLanguage();
       renderKnots();
 
       // Check for hash on page load and open modal if needed
       function initializeFromHash() {
-        const knot = getKnotFromHash();
-        if (knot) {
-          openModal(knot, false);
+        const result = getKnotFromHash();
+
+        // Handle language change from URL (even without a knot)
+        if (result && result.language && result.language !== currentLanguage) {
+          currentLanguage = result.language;
+          saveLanguagePreference(currentLanguage);
+          updatePageLanguage();
+        }
+
+        if (result && result.knot) {
+          openModal(result.knot, false);
         }
       }
 
       // Since script is at bottom of body, DOM should be ready
       initializeFromHash();
-
-      // Add some CSS for line clamping
-      const style = document.createElement('style');
-      style.textContent = `
-        .line-clamp-3 {
-          display: -webkit-box;
-          -webkit-line-clamp: 3;
-          -webkit-box-orient: vertical;
-          overflow: hidden;
-        }
-      `;
-      document.head.appendChild(style);
     </script>
   </body>
 </html>
