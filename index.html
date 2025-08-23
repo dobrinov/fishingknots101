@@ -230,13 +230,7 @@
             Fishing Knots
           </h1>
           <div class="flex-1 flex justify-end items-center gap-2">
-            <!-- Language Auto-detection Indicator -->
-            <div id="languageIndicator" class="hidden text-xs text-gray-500 flex items-center gap-1">
-              <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-              </svg>
-              <span id="languageIndicatorText">Auto-detected</span>
-            </div>
+
 
             <!-- Language Selector -->
             <nav aria-label="Language selection">
@@ -631,7 +625,7 @@
           'filter-difficulty': 'Difficulty: {value}',
           'filter-strength': 'Strength: {value}',
           'filter-use-case': 'Use Case: {value}',
-          'auto-detected': 'Auto-detected',
+
           'language-modal-title': 'Choose Language'
         },
         bg: {
@@ -699,7 +693,7 @@
           'filter-difficulty': 'Трудност: {value}',
           'filter-strength': 'Якост: {value}',
           'filter-use-case': 'Приложение: {value}',
-          'auto-detected': 'Автоматично открит',
+
           'language-modal-title': 'Избери език'
         },
         de: {
@@ -767,7 +761,7 @@
           'filter-difficulty': 'Schwierigkeit: {value}',
           'filter-strength': 'Stärke: {value}',
           'filter-use-case': 'Anwendungsfall: {value}',
-          'auto-detected': 'Automatisch erkannt',
+
           'language-modal-title': 'Sprache wählen'
         },
         fr: {
@@ -835,7 +829,7 @@
           'filter-difficulty': 'Difficulté : {value}',
           'filter-strength': 'Résistance : {value}',
           'filter-use-case': 'Cas d\'Usage : {value}',
-          'auto-detected': 'Détecté automatiquement',
+
           'language-modal-title': 'Choisir la langue'
         },
         es: {
@@ -903,7 +897,7 @@
           'filter-difficulty': 'Dificultad: {value}',
           'filter-strength': 'Resistencia: {value}',
           'filter-use-case': 'Caso de Uso: {value}',
-          'auto-detected': 'Detectado automáticamente',
+
           'language-modal-title': 'Elegir idioma'
         },
         zh: {
@@ -971,7 +965,7 @@
           'filter-difficulty': '难度：{value}',
           'filter-strength': '强度：{value}',
           'filter-use-case': '使用场景：{value}',
-          'auto-detected': '自动检测',
+
           'language-modal-title': '选择语言'
         },
         ja: {
@@ -1039,7 +1033,7 @@
           'filter-difficulty': '難易度：{value}',
           'filter-strength': '強度：{value}',
           'filter-use-case': '使用例：{value}',
-          'auto-detected': '自動検出',
+
           'language-modal-title': '言語を選択'
         },
         ru: {
@@ -1107,7 +1101,7 @@
           'filter-difficulty': 'Сложность: {value}',
           'filter-strength': 'Прочность: {value}',
           'filter-use-case': 'Случай использования: {value}',
-          'auto-detected': 'Автоматически обнаружен',
+
           'language-modal-title': 'Выберите язык'
         },
         el: {
@@ -1175,7 +1169,7 @@
           'filter-difficulty': 'Δυσκολία: {value}',
           'filter-strength': 'Αντοχή: {value}',
           'filter-use-case': 'Περίπτωση Χρήσης: {value}',
-          'auto-detected': 'Αυτόματα ανιχνεύθηκε',
+
           'language-modal-title': 'Επιλέξτε γλώσσα'
         }
       };
@@ -1842,42 +1836,7 @@
         }
       }
 
-                  function detectBrowserLanguage() {
-        // Get browser languages in order of preference
-        const browserLanguages = navigator.languages || [navigator.language || navigator.userLanguage || 'en'];
 
-        // Map of browser language codes to our supported languages
-        const languageMap = {
-          'en': 'en', 'en-US': 'en', 'en-GB': 'en', 'en-AU': 'en', 'en-CA': 'en',
-          'bg': 'bg', 'bg-BG': 'bg',
-          'de': 'de', 'de-DE': 'de', 'de-AT': 'de', 'de-CH': 'de',
-          'fr': 'fr', 'fr-FR': 'fr', 'fr-CA': 'fr', 'fr-BE': 'fr', 'fr-CH': 'fr',
-          'es': 'es', 'es-ES': 'es', 'es-MX': 'es', 'es-AR': 'es', 'es-CO': 'es', 'es-CL': 'es',
-          'zh': 'zh', 'zh-CN': 'zh', 'zh-TW': 'zh', 'zh-HK': 'zh', 'zh-SG': 'zh',
-          'ja': 'ja', 'ja-JP': 'ja',
-          'ru': 'ru', 'ru-RU': 'ru', 'ru-BY': 'ru', 'ru-KZ': 'ru',
-          'el': 'el', 'el-GR': 'el', 'el-CY': 'el'
-        };
-
-        // Find the first supported language
-        for (const browserLang of browserLanguages) {
-          const normalizedLang = browserLang.toLowerCase();
-
-          // Try exact match first
-          if (languageMap[normalizedLang]) {
-            return languageMap[normalizedLang];
-          }
-
-          // Try language code without country (e.g., 'de' from 'de-DE')
-          const langCode = normalizedLang.split('-')[0];
-          if (languageMap[langCode]) {
-            return languageMap[langCode];
-          }
-        }
-
-        // Default to English if no match found
-        return 'en';
-      }
 
       function saveLanguagePreference(language) {
         try {
@@ -1904,20 +1863,17 @@
         const urlParams = new URLSearchParams(window.location.search);
         const langParam = urlParams.get('lang');
         const savedLanguage = getLanguagePreference();
-        let languageSource = 'default';
 
-        // Priority order: URL parameter > Saved preference > Auto-detected > Default (English)
+        // Priority order: URL parameter > Saved preference > Default (English)
         if (langParam && translations[langParam]) {
           // URL parameter takes highest priority
           currentLanguage = langParam;
-          languageSource = 'url';
 
           // Save URL language as new preference
           saveLanguagePreference(langParam);
         } else if (savedLanguage && translations[savedLanguage]) {
           // Use saved language preference
           currentLanguage = savedLanguage;
-          languageSource = 'saved';
 
           // Update URL to reflect saved language (but don't show 'en' in URL)
           if (savedLanguage !== 'en') {
@@ -1926,48 +1882,11 @@
             window.history.replaceState(null, null, url);
           }
         } else {
-          // Auto-detect browser language
-          const detectedLanguage = detectBrowserLanguage();
-          currentLanguage = detectedLanguage;
-          languageSource = 'detected';
-
-          // Save detected language as preference
-          saveLanguagePreference(detectedLanguage);
-
-          // Update URL to reflect detected language (but don't show 'en' in URL)
-          if (detectedLanguage !== 'en') {
-            const url = new URL(window.location);
-            url.searchParams.set('lang', detectedLanguage);
-            window.history.replaceState(null, null, url);
-          }
+          // Default to English
+          currentLanguage = 'en';
         }
 
         updatePageLanguage();
-
-        // Show auto-detection indicator if language was detected
-        const indicator = document.getElementById('languageIndicator');
-        const indicatorText = document.getElementById('languageIndicatorText');
-
-        if (languageSource === 'detected' && indicator && indicatorText) {
-          indicatorText.textContent = translateText('auto-detected');
-          indicator.classList.remove('hidden');
-
-          // Auto-hide the indicator after 5 seconds
-          setTimeout(() => {
-            if (indicator) {
-              indicator.classList.add('hidden');
-            }
-          }, 5000);
-        }
-
-        // Log detection for debugging (remove in production)
-        console.log(`Language initialized: ${currentLanguage} (source: ${languageSource})`, {
-          browserLanguages: navigator.languages,
-          urlParam: langParam,
-          savedLanguage: savedLanguage,
-          detected: detectBrowserLanguage(),
-          source: languageSource
-        });
       }
 
       // Utility Functions
@@ -2300,11 +2219,7 @@
             // Save user's language preference
             const saved = saveLanguagePreference(currentLanguage);
 
-            // Hide auto-detection indicator when user manually changes language
-            const indicator = document.getElementById('languageIndicator');
-            if (indicator) {
-              indicator.classList.add('hidden');
-            }
+
 
             updatePageLanguage();
             closeLanguageModal();
