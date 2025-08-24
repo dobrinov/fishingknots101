@@ -1,501 +1,157 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- Homepage - All Languages -->
+  <!-- Homepage -->
   <url>
     <loc>https://fishingknots101.com/</loc>
-    <lastmod>2025-08-23</lastmod>
+    <lastmod>2025-01-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
+  <!-- Individual Knot Pages -->
   <url>
-    <loc>https://fishingknots101.com/#bg</loc>
-    <lastmod>2025-08-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-
-  <url>
-    <loc>https://fishingknots101.com/#de</loc>
-    <lastmod>2025-08-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-
-  <url>
-    <loc>https://fishingknots101.com/#fr</loc>
-    <lastmod>2025-08-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-
-  <url>
-    <loc>https://fishingknots101.com/#es</loc>
-    <lastmod>2025-08-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-
-  <url>
-    <loc>https://fishingknots101.com/#zh</loc>
-    <lastmod>2025-08-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-
-  <url>
-    <loc>https://fishingknots101.com/#ja</loc>
-    <lastmod>2025-08-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-
-  <url>
-    <loc>https://fishingknots101.com/#ru</loc>
-    <lastmod>2025-08-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-
-  <url>
-    <loc>https://fishingknots101.com/#el</loc>
-    <lastmod>2025-08-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-
-  <!-- Individual Knot Pages - English (Default) -->
-  <url>
-    <loc>https://fishingknots101.com/#improved-clinch-knot</loc>
-    <lastmod>2025-08-23</lastmod>
+    <loc>https://fishingknots101.com/alberto-knot.html</loc>
+    <lastmod>2025-01-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://fishingknots101.com/#fg-knot</loc>
-    <lastmod>2025-08-23</lastmod>
+    <loc>https://fishingknots101.com/albright-knot.html</loc>
+    <lastmod>2025-01-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://fishingknots101.com/#surgeons-knot</loc>
-    <lastmod>2025-08-23</lastmod>
+    <loc>https://fishingknots101.com/arbor-knot.html</loc>
+    <lastmod>2025-01-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://fishingknots101.com/#alberto-knot</loc>
-    <lastmod>2025-08-23</lastmod>
+    <loc>https://fishingknots101.com/bimini-twist.html</loc>
+    <lastmod>2025-01-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://fishingknots101.com/#palomar-knot</loc>
-    <lastmod>2025-08-23</lastmod>
+    <loc>https://fishingknots101.com/blood-knot.html</loc>
+    <lastmod>2025-01-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://fishingknots101.com/#uni-knot</loc>
-    <lastmod>2025-08-23</lastmod>
+    <loc>https://fishingknots101.com/double-uni-knot.html</loc>
+    <lastmod>2025-01-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://fishingknots101.com/#blood-knot</loc>
-    <lastmod>2025-08-23</lastmod>
+    <loc>https://fishingknots101.com/dropper-loop.html</loc>
+    <lastmod>2025-01-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://fishingknots101.com/#speed-blood-knot</loc>
-    <lastmod>2025-08-23</lastmod>
+    <loc>https://fishingknots101.com/fg-knot.html</loc>
+    <lastmod>2025-01-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://fishingknots101.com/#double-uni-knot</loc>
-    <lastmod>2025-08-23</lastmod>
+    <loc>https://fishingknots101.com/haywire-twist.html</loc>
+    <lastmod>2025-01-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://fishingknots101.com/#rapala-knot</loc>
-    <lastmod>2025-08-23</lastmod>
+    <loc>https://fishingknots101.com/improved-clinch-knot.html</loc>
+    <lastmod>2025-01-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://fishingknots101.com/#albright-knot</loc>
-    <lastmod>2025-08-23</lastmod>
+    <loc>https://fishingknots101.com/loop-to-loop-connection.html</loc>
+    <lastmod>2025-01-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://fishingknots101.com/#perfection-loop</loc>
-    <lastmod>2025-08-23</lastmod>
+    <loc>https://fishingknots101.com/nail-knot.html</loc>
+    <lastmod>2025-01-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://fishingknots101.com/#trilene-knot</loc>
-    <lastmod>2025-08-23</lastmod>
+    <loc>https://fishingknots101.com/orvis-knot.html</loc>
+    <lastmod>2025-01-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://fishingknots101.com/#bimini-twist</loc>
-    <lastmod>2025-08-23</lastmod>
+    <loc>https://fishingknots101.com/palomar-knot.html</loc>
+    <lastmod>2025-01-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://fishingknots101.com/#snell-knot</loc>
-    <lastmod>2025-08-23</lastmod>
+    <loc>https://fishingknots101.com/perfection-loop.html</loc>
+    <lastmod>2025-01-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://fishingknots101.com/#haywire-twist</loc>
-    <lastmod>2025-08-23</lastmod>
+    <loc>https://fishingknots101.com/rapala-knot.html</loc>
+    <lastmod>2025-01-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://fishingknots101.com/#dropper-loop</loc>
-    <lastmod>2025-08-23</lastmod>
+    <loc>https://fishingknots101.com/snell-knot.html</loc>
+    <lastmod>2025-01-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://fishingknots101.com/#nail-knot</loc>
-    <lastmod>2025-08-23</lastmod>
+    <loc>https://fishingknots101.com/speed-blood-knot.html</loc>
+    <lastmod>2025-01-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://fishingknots101.com/#arbor-knot</loc>
-    <lastmod>2025-08-23</lastmod>
+    <loc>https://fishingknots101.com/surgeons-knot.html</loc>
+    <lastmod>2025-01-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://fishingknots101.com/#loop-to-loop-connection</loc>
-    <lastmod>2025-08-23</lastmod>
+    <loc>https://fishingknots101.com/trilene-knot.html</loc>
+    <lastmod>2025-01-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://fishingknots101.com/#orvis-knot</loc>
-    <lastmod>2025-08-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- Individual Knot Pages - Bulgarian -->
-  <url>
-    <loc>https://fishingknots101.com/#bg/improved-clinch-knot</loc>
-    <lastmod>2025-08-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://fishingknots101.com/#bg/fg-knot</loc>
-    <lastmod>2025-08-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://fishingknots101.com/#bg/surgeons-knot</loc>
-    <lastmod>2025-08-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://fishingknots101.com/#bg/alberto-knot</loc>
-    <lastmod>2025-08-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://fishingknots101.com/#bg/palomar-knot</loc>
-    <lastmod>2025-08-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- Individual Knot Pages - German -->
-  <url>
-    <loc>https://fishingknots101.com/#de/improved-clinch-knot</loc>
-    <lastmod>2025-08-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://fishingknots101.com/#de/fg-knot</loc>
-    <lastmod>2025-08-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://fishingknots101.com/#de/surgeons-knot</loc>
-    <lastmod>2025-08-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://fishingknots101.com/#de/alberto-knot</loc>
-    <lastmod>2025-08-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://fishingknots101.com/#de/palomar-knot</loc>
-    <lastmod>2025-08-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- Individual Knot Pages - French -->
-  <url>
-    <loc>https://fishingknots101.com/#fr/improved-clinch-knot</loc>
-    <lastmod>2025-08-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://fishingknots101.com/#fr/fg-knot</loc>
-    <lastmod>2025-08-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://fishingknots101.com/#fr/surgeons-knot</loc>
-    <lastmod>2025-08-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://fishingknots101.com/#fr/alberto-knot</loc>
-    <lastmod>2025-08-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://fishingknots101.com/#fr/palomar-knot</loc>
-    <lastmod>2025-08-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- Individual Knot Pages - Spanish -->
-  <url>
-    <loc>https://fishingknots101.com/#es/improved-clinch-knot</loc>
-    <lastmod>2025-08-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://fishingknots101.com/#es/fg-knot</loc>
-    <lastmod>2025-08-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://fishingknots101.com/#es/surgeons-knot</loc>
-    <lastmod>2025-08-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://fishingknots101.com/#es/alberto-knot</loc>
-    <lastmod>2025-08-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://fishingknots101.com/#es/palomar-knot</loc>
-    <lastmod>2025-08-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- Individual Knot Pages - Chinese -->
-  <url>
-    <loc>https://fishingknots101.com/#zh/improved-clinch-knot</loc>
-    <lastmod>2025-08-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://fishingknots101.com/#zh/fg-knot</loc>
-    <lastmod>2025-08-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://fishingknots101.com/#zh/surgeons-knot</loc>
-    <lastmod>2025-08-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://fishingknots101.com/#zh/alberto-knot</loc>
-    <lastmod>2025-08-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://fishingknots101.com/#zh/palomar-knot</loc>
-    <lastmod>2025-08-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- Individual Knot Pages - Japanese -->
-  <url>
-    <loc>https://fishingknots101.com/#ja/improved-clinch-knot</loc>
-    <lastmod>2025-08-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://fishingknots101.com/#ja/fg-knot</loc>
-    <lastmod>2025-08-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://fishingknots101.com/#ja/surgeons-knot</loc>
-    <lastmod>2025-08-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://fishingknots101.com/#ja/alberto-knot</loc>
-    <lastmod>2025-08-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://fishingknots101.com/#ja/palomar-knot</loc>
-    <lastmod>2025-08-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- Individual Knot Pages - Russian -->
-  <url>
-    <loc>https://fishingknots101.com/#ru/improved-clinch-knot</loc>
-    <lastmod>2025-08-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://fishingknots101.com/#ru/fg-knot</loc>
-    <lastmod>2025-08-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://fishingknots101.com/#ru/surgeons-knot</loc>
-    <lastmod>2025-08-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://fishingknots101.com/#ru/alberto-knot</loc>
-    <lastmod>2025-08-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://fishingknots101.com/#ru/palomar-knot</loc>
-    <lastmod>2025-08-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- Individual Knot Pages - Greek -->
-  <url>
-    <loc>https://fishingknots101.com/#el/improved-clinch-knot</loc>
-    <lastmod>2025-08-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://fishingknots101.com/#el/fg-knot</loc>
-    <lastmod>2025-08-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://fishingknots101.com/#el/surgeons-knot</loc>
-    <lastmod>2025-08-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://fishingknots101.com/#el/alberto-knot</loc>
-    <lastmod>2025-08-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://fishingknots101.com/#el/palomar-knot</loc>
-    <lastmod>2025-08-23</lastmod>
+    <loc>https://fishingknots101.com/uni-knot.html</loc>
+    <lastmod>2025-01-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

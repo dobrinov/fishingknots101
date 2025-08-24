@@ -1,2 +1,15 @@
 User-agent: *
 Disallow:
+
+# Sitemap location
+Sitemap: https://fishingknots101.com/sitemap.xml
+
+# Allow all search engines to crawl the site
+User-agent: Googlebot
+Disallow:
+
+User-agent: Bingbot
+Disallow:
+
+# Crawl delay for general bots
+Crawl-delay: 1

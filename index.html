@@ -20,8 +20,8 @@
     <meta name="format-detection" content="telephone=no" />
     <meta name="mobile-web-app-capable" content="yes" />
     <meta name="application-name" content="Fishing Knots 101" />
-    <meta name="description" content="Learn the most important fishing knots with step-by-step video tutorials. Master clinch knots, FG knots, surgeon's knots, and more essential fishing techniques." />
-    <meta name="keywords" content="fishing knots, clinch knot, FG knot, surgeon's knot, alberto knot, palomar knot, fishing tutorials, angling, fishing techniques, bimini twist, haywire twist, blood knot, uni knot" />
+    <meta name="description" content="Master 21 essential fishing knots with free video tutorials! From beginner clinch knots to pro FG knots. Step-by-step guides, tips & troubleshooting. Perfect your fishing technique today!" />
+    <meta name="keywords" content="fishing knots tutorial, how to tie fishing knots, best fishing knots, fishing knot videos, clinch knot, palomar knot, FG knot, fishing techniques, angling knots, fishing line knots, fishing tips" />
 
     <!-- Hreflang Tags for Multilingual SEO -->
     <link rel="alternate" hreflang="en" href="https://fishingknots101.com/" />
@@ -66,34 +66,121 @@
     <link rel="canonical" href="https://fishingknots101.com" id="canonical-url" />
 
     <!-- Favicon and Theme -->
-    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
     <meta name="theme-color" content="#1e3a8a" />
     <meta name="msapplication-TileColor" content="#1e3a8a" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="default" />
 
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Fishing Knots 101",
+      "description": "Learn the most important fishing knots with step-by-step video tutorials. Master clinch knots, FG knots, surgeon's knots, and more essential fishing techniques.",
+      "url": "https://fishingknots101.com",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://fishingknots101.com/?search={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Fishing Knots 101",
+        "url": "https://fishingknots101.com"
+      }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "Essential Fishing Knots",
+      "description": "Complete collection of essential fishing knots with video tutorials",
+      "numberOfItems": 21,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@type": "HowTo",
+            "name": "Improved Clinch Knot",
+            "url": "https://fishingknots101.com/improved-clinch-knot.html",
+            "description": "The most popular knot for tying line to hook, lure or swivel. Easy to tie and reliable for most fishing situations."
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@type": "HowTo",
+            "name": "Palomar Knot",
+            "url": "https://fishingknots101.com/palomar-knot.html",
+            "description": "Best knot for attaching braided line to a hook. Very strong and maintains most of the line's original strength."
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "item": {
+            "@type": "HowTo",
+            "name": "FG Knot",
+            "url": "https://fishingknots101.com/fg-knot.html",
+            "description": "Very strong leader knot that joins braided line to fluorocarbon or monofilament leader. Preferred by many professional anglers."
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "item": {
+            "@type": "HowTo",
+            "name": "Surgeon's Knot",
+            "url": "https://fishingknots101.com/surgeons-knot.html",
+            "description": "Easy knot to join two lines of moderately unequal size. Quick to tie and very reliable."
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "item": {
+            "@type": "HowTo",
+            "name": "Alberto Knot",
+            "url": "https://fishingknots101.com/alberto-knot.html",
+            "description": "Excellent knot for connecting braided line to fluorocarbon or monofilament leader. Easier to tie than the FG knot."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <style>
+      .line-clamp-3 {
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+
+      .modal-backdrop {
+        backdrop-filter: blur(4px);
+      }
+    </style>
   </head>
   <body class="bg-gray-50 min-h-screen" itemscope itemtype="https://schema.org/WebPage">
     <!-- Header -->
-    <header class="text-center" role="banner">
-      <div class="container mx-auto px-4 py-6">
-        <div class="flex justify-between items-center">
-          <div class="flex-1"></div>
-          <h1 class="text-3xl md:text-4xl font-bold" data-translate="site-title" itemprop="name">
-            Fishing Knots
-          </h1>
-          <div class="flex-1 flex justify-end items-center gap-2">
-
-
-            <!-- Language Selector -->
-            <nav aria-label="Language selection">
-              <button id="languageFlag" class="hover:bg-white border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 bg-gray-50 transition-colors flex items-center gap-2 cursor-pointer" aria-label="Choose language">
-                <span id="currentLanguageFlag" class="text-lg">🇺🇸</span>
-              </button>
-            </nav>
-          </div>
-        </div>
+    <header class="text-center py-6" role="banner">
+      <div class="container mx-auto px-4">
+        <h1 class="text-3xl md:text-4xl font-bold" data-translate="site-title" itemprop="name">
+          Fishing Knots
+        </h1>
       </div>
     </header>
 
@@ -111,21 +198,20 @@
 
       <!-- Knots Collection Section -->
       <section aria-label="Fishing Knots Collection">
-        <!-- Filter Status -->
-        <div class="mb-4 flex justify-between items-center">
+        <!-- Filter Status and Search -->
+        <div class="mb-6 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
           <div class="flex flex-wrap items-center gap-4">
-            <p id="knotCount" class="text-gray-600 text-sm"></p>
+            <p id="knotCount" class="text-gray-600 text-sm font-medium"></p>
             <div id="activeFilters" class="flex flex-wrap gap-2"></div>
           </div>
-          <!-- Search Button -->
           <button
             id="openSearchModal"
-            class="bg-blue-700 hover:bg-blue-600 text-white px-3 sm:px-6 py-2 rounded-lg transition-colors flex items-center gap-2"
+            class="bg-blue-700 hover:bg-blue-600 text-white px-4 py-2 rounded-lg transition-colors flex items-center gap-2 shadow-sm"
           >
             <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
             </svg>
-            <span class="hidden sm:inline" data-translate="search-button">Search</span>
+            <span data-translate="search-button">Search</span>
           </button>
         </div>
 
@@ -141,13 +227,105 @@
         <p class="text-gray-500" data-translate="no-results-text">Try adjusting your search or filters</p>
       </div>
 
+      <!-- Knot Selection Guide -->
+      <section class="mt-16 bg-white rounded-lg shadow-sm p-8 sm:block hidden">
+        <h2 class="text-2xl font-bold text-gray-800 mb-8 text-center">Choose the Right Knot for Your Fishing</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="bg-blue-50 rounded-lg p-6">
+            <h3 class="text-lg font-semibold text-blue-800 mb-3">🎣 Beginner Anglers</h3>
+            <p class="text-blue-700 mb-4">Start with these easy-to-learn, reliable knots:</p>
+            <ul class="space-y-2 text-blue-600">
+              <li>• <a href="improved-clinch-knot.html" class="hover:underline">Improved Clinch Knot</a></li>
+              <li>• <a href="palomar-knot.html" class="hover:underline">Palomar Knot</a></li>
+              <li>• <a href="surgeons-knot.html" class="hover:underline">Surgeon's Knot</a></li>
+            </ul>
+          </div>
+          <div class="bg-green-50 rounded-lg p-6">
+            <h3 class="text-lg font-semibold text-green-800 mb-3">🐟 Braided Line Users</h3>
+            <p class="text-green-700 mb-4">Best knots for slippery braided lines:</p>
+            <ul class="space-y-2 text-green-600">
+              <li>• <a href="palomar-knot.html" class="hover:underline">Palomar Knot</a></li>
+              <li>• <a href="uni-knot.html" class="hover:underline">Uni Knot</a></li>
+              <li>• <a href="fg-knot.html" class="hover:underline">FG Knot</a> (leader connection)</li>
+            </ul>
+          </div>
+          <div class="bg-purple-50 rounded-lg p-6">
+            <h3 class="text-lg font-semibold text-purple-800 mb-3">🎯 Professional Anglers</h3>
+            <p class="text-purple-700 mb-4">Advanced knots for maximum performance:</p>
+            <ul class="space-y-2 text-purple-600">
+              <li>• <a href="fg-knot.html" class="hover:underline">FG Knot</a></li>
+              <li>• <a href="bimini-twist.html" class="hover:underline">Bimini Twist</a></li>
+              <li>• <a href="alberto-knot.html" class="hover:underline">Alberto Knot</a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Knot Comparison Table -->
+      <section class="mt-16 bg-white rounded-lg shadow-sm p-8 sm:block hidden">
+        <h2 class="text-2xl font-bold text-gray-800 mb-8 text-center">Fishing Knot Comparison Guide</h2>
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm">
+            <thead>
+              <tr class="border-b-2 border-gray-200">
+                <th class="text-left py-3 px-4 font-semibold">Knot Name</th>
+                <th class="text-center py-3 px-4 font-semibold">Difficulty</th>
+                <th class="text-center py-3 px-4 font-semibold">Strength</th>
+                <th class="text-left py-3 px-4 font-semibold">Best For</th>
+                <th class="text-left py-3 px-4 font-semibold">Line Type</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-100">
+              <tr class="hover:bg-gray-50">
+                <td class="py-3 px-4"><a href="improved-clinch-knot.html" class="text-blue-600 hover:underline font-medium">Improved Clinch Knot</a></td>
+                <td class="py-3 px-4 text-center"><span class="px-2 py-1 bg-green-100 text-green-800 rounded-full text-xs">Easy</span></td>
+                <td class="py-3 px-4 text-center"><span class="px-2 py-1 bg-yellow-100 text-yellow-800 rounded-full text-xs">85%</span></td>
+                <td class="py-3 px-4">Hooks, lures, swivels</td>
+                <td class="py-3 px-4">Mono, Fluoro</td>
+              </tr>
+              <tr class="hover:bg-gray-50">
+                <td class="py-3 px-4"><a href="palomar-knot.html" class="text-blue-600 hover:underline font-medium">Palomar Knot</a></td>
+                <td class="py-3 px-4 text-center"><span class="px-2 py-1 bg-green-100 text-green-800 rounded-full text-xs">Easy</span></td>
+                <td class="py-3 px-4 text-center"><span class="px-2 py-1 bg-green-100 text-green-800 rounded-full text-xs">95%</span></td>
+                <td class="py-3 px-4">Hooks, jigs</td>
+                <td class="py-3 px-4">Braid, Heavy Mono</td>
+              </tr>
+              <tr class="hover:bg-gray-50">
+                <td class="py-3 px-4"><a href="fg-knot.html" class="text-blue-600 hover:underline font-medium">FG Knot</a></td>
+                <td class="py-3 px-4 text-center"><span class="px-2 py-1 bg-red-100 text-red-800 rounded-full text-xs">Hard</span></td>
+                <td class="py-3 px-4 text-center"><span class="px-2 py-1 bg-green-100 text-green-800 rounded-full text-xs">95%</span></td>
+                <td class="py-3 px-4">Leader connections</td>
+                <td class="py-3 px-4">Braid to Fluoro/Mono</td>
+              </tr>
+              <tr class="hover:bg-gray-50">
+                <td class="py-3 px-4"><a href="surgeons-knot.html" class="text-blue-600 hover:underline font-medium">Surgeon's Knot</a></td>
+                <td class="py-3 px-4 text-center"><span class="px-2 py-1 bg-green-100 text-green-800 rounded-full text-xs">Easy</span></td>
+                <td class="py-3 px-4 text-center"><span class="px-2 py-1 bg-green-100 text-green-800 rounded-full text-xs">90%</span></td>
+                <td class="py-3 px-4">Line joining</td>
+                <td class="py-3 px-4">Any to Any</td>
+              </tr>
+              <tr class="hover:bg-gray-50">
+                <td class="py-3 px-4"><a href="alberto-knot.html" class="text-blue-600 hover:underline font-medium">Alberto Knot</a></td>
+                <td class="py-3 px-4 text-center"><span class="px-2 py-1 bg-yellow-100 text-yellow-800 rounded-full text-xs">Medium</span></td>
+                <td class="py-3 px-4 text-center"><span class="px-2 py-1 bg-green-100 text-green-800 rounded-full text-xs">90%</span></td>
+                <td class="py-3 px-4">Leader connections</td>
+                <td class="py-3 px-4">Braid to Fluoro/Mono</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="mt-6 text-center">
+          <p class="text-gray-600 text-sm">Click any knot name to view detailed tutorial with step-by-step instructions</p>
+        </div>
+      </section>
+
       <!-- FAQ Section -->
       <section class="mt-16 bg-white rounded-lg shadow-sm p-8 sm:block hidden" itemscope itemtype="https://schema.org/FAQPage" aria-labelledby="faq-heading">
         <h2 id="faq-heading" class="text-2xl font-bold text-gray-800 mb-8 text-center" data-translate="faq-title">Frequently Asked Questions</h2>
         <div class="max-w-3xl mx-auto space-y-6" role="list">
           <div class="border-b border-gray-200 pb-6">
             <h3 class="text-lg font-semibold text-gray-800 mb-2" data-translate="faq-1-question">What are the most important fishing knots to learn?</h3>
-            <p class="text-gray-600" data-translate="faq-1-answer">The essential knots every angler should master are the Improved Clinch Knot (for hooks), Palomar Knot (for braided line), Surgeon's Knot (joining lines), and FG Knot (braid to leader connections). These four knots will cover 90% of your fishing situations.</p>
+            <p class="text-gray-600" data-translate="faq-1-answer">The essential knots every angler should master are the <a href="improved-clinch-knot.html" class="text-blue-600 hover:underline">Improved Clinch Knot</a> (for hooks), <a href="palomar-knot.html" class="text-blue-600 hover:underline">Palomar Knot</a> (for braided line), <a href="surgeons-knot.html" class="text-blue-600 hover:underline">Surgeon's Knot</a> (joining lines), and <a href="fg-knot.html" class="text-blue-600 hover:underline">FG Knot</a> (braid to leader connections). These four knots will cover 90% of your fishing situations.</p>
           </div>
           <div class="border-b border-gray-200 pb-6">
             <h3 class="text-lg font-semibold text-gray-800 mb-2" data-translate="faq-2-question">How do I choose the right knot for my fishing situation?</h3>
@@ -191,11 +369,11 @@
           <div>
             <h3 class="text-lg font-semibold mb-4" data-translate="footer-popular-title">Popular Knots</h3>
             <ul class="space-y-2 text-gray-400">
-              <li><a href="#improved-clinch-knot" class="hover:text-white transition-colors">Improved Clinch Knot</a></li>
-              <li><a href="#fg-knot" class="hover:text-white transition-colors">FG Knot</a></li>
-              <li><a href="#palomar-knot" class="hover:text-white transition-colors">Palomar Knot</a></li>
-              <li><a href="#surgeons-knot" class="hover:text-white transition-colors">Surgeon's Knot</a></li>
-              <li><a href="#alberto-knot" class="hover:text-white transition-colors">Alberto Knot</a></li>
+              <li><a href="improved-clinch-knot.html" class="hover:text-white transition-colors">Improved Clinch Knot</a></li>
+              <li><a href="fg-knot.html" class="hover:text-white transition-colors">FG Knot</a></li>
+              <li><a href="palomar-knot.html" class="hover:text-white transition-colors">Palomar Knot</a></li>
+              <li><a href="surgeons-knot.html" class="hover:text-white transition-colors">Surgeon's Knot</a></li>
+              <li><a href="alberto-knot.html" class="hover:text-white transition-colors">Alberto Knot</a></li>
             </ul>
           </div>
 
@@ -220,66 +398,10 @@
       </div>
     </footer>
 
-    <!-- Modal -->
-    <div id="knotModal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 flex items-start justify-center sm:p-12">
-      <div class="bg-white sm:rounded-lg w-full h-full overflow-auto">
-        <div class="flex justify-between items-center px-6 py-4">
-          <h2 id="modalTitle" class="text-2xl font-bold text-gray-800"></h2>
-          <button id="closeModal" class="text-gray-500 hover:text-gray-700 text-3xl font-bold cursor-pointer" aria-label="Close modal">
-            &times;
-          </button>
-        </div>
 
-        <div class="p-6">
-          <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-            <!-- Video Player -->
-            <div class="lg:col-span-2">
-              <div class="aspect-video">
-                <iframe
-                  id="modalVideo"
-                  width="100%"
-                  height="100%"
-                  src=""
-                  title="Fishing Knot Tutorial"
-                  frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen
-                  class="rounded-lg"
-                ></iframe>
-              </div>
-            </div>
-
-            <!-- Knot Details -->
-            <div class="lg:col-span-1">
-              <div class="space-y-4">
-                <div>
-                  <h3 class="font-semibold text-gray-700 mb-2" data-translate="modal-difficulty-label">Difficulty</h3>
-                  <span id="modalDifficulty" class="inline-block px-3 py-1 rounded-full text-sm font-medium"></span>
-                </div>
-
-                <div>
-                  <h3 class="font-semibold text-gray-700 mb-2" data-translate="modal-strength-label">Strength</h3>
-                  <span id="modalStrength" class="inline-block px-3 py-1 rounded-full text-sm font-medium"></span>
-                </div>
-
-                <div>
-                  <h3 class="font-semibold text-gray-700 mb-2" data-translate="modal-used-for-label">Best Used For</h3>
-                  <div id="modalTags" class="flex flex-wrap gap-2"></div>
-                </div>
-
-                <div>
-                  <h3 class="font-semibold text-gray-700 mb-2" data-translate="modal-description-label">Description</h3>
-                  <p id="modalDescription" class="text-gray-600 text-sm leading-relaxed"></p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
 
     <!-- Search Modal -->
-    <div id="searchModal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 flex items-center justify-center p-4">
+    <div id="searchModal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 flex items-center justify-center p-4 modal-backdrop">
       <div class="bg-white rounded-lg max-w-2xl w-full max-h-[90vh] overflow-auto">
         <div class="flex justify-between items-center px-6 py-4">
           <h2 class="text-2xl font-bold text-gray-800" data-translate="search-modal-title">Search Knots</h2>
@@ -356,63 +478,7 @@
       </div>
     </div>
 
-    <!-- Language Modal -->
-    <div id="languageModal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 flex items-center justify-center p-4">
-      <div class="bg-white rounded-lg max-w-md w-full max-h-[90vh] overflow-auto">
-        <div class="flex justify-between items-center px-6 py-4 border-b">
-          <h2 class="text-xl font-bold text-gray-800" data-translate="language-modal-title">Choose Language</h2>
-          <button id="closeLanguageModal" class="text-gray-500 hover:text-gray-700 text-2xl font-bold" aria-label="Close language modal">
-            &times;
-          </button>
-        </div>
-
-        <div class="p-6">
-          <div class="grid grid-cols-1 gap-3">
-            <button class="language-option flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors text-left w-full" data-lang="en">
-              <span class="text-2xl">🇺🇸</span>
-              <span class="font-medium">English</span>
-            </button>
-            <button class="language-option flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors text-left w-full" data-lang="bg">
-              <span class="text-2xl">🇧🇬</span>
-              <span class="font-medium">Български</span>
-            </button>
-            <button class="language-option flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors text-left w-full" data-lang="de">
-              <span class="text-2xl">🇩🇪</span>
-              <span class="font-medium">Deutsch</span>
-            </button>
-            <button class="language-option flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors text-left w-full" data-lang="fr">
-              <span class="text-2xl">🇫🇷</span>
-              <span class="font-medium">Français</span>
-            </button>
-            <button class="language-option flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors text-left w-full" data-lang="es">
-              <span class="text-2xl">🇪🇸</span>
-              <span class="font-medium">Español</span>
-            </button>
-            <button class="language-option flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors text-left w-full" data-lang="zh">
-              <span class="text-2xl">🇨🇳</span>
-              <span class="font-medium">中文</span>
-            </button>
-            <button class="language-option flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors text-left w-full" data-lang="ja">
-              <span class="text-2xl">🇯🇵</span>
-              <span class="font-medium">日本语</span>
-            </button>
-            <button class="language-option flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors text-left w-full" data-lang="ru">
-              <span class="text-2xl">🇷🇺</span>
-              <span class="font-medium">Русский</span>
-            </button>
-            <button class="language-option flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors text-left w-full" data-lang="el">
-              <span class="text-2xl">🇬🇷</span>
-              <span class="font-medium">Ελληνικά</span>
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-
     <script>
-      // Language system
-      let currentLanguage = 'en';
-
       const translations = {
         en: {
           'site-title': 'Fishing Knots',
@@ -479,8 +545,6 @@
           'filter-difficulty': 'Difficulty: {value}',
           'filter-strength': 'Strength: {value}',
           'filter-use-case': 'Use Case: {value}',
-
-          'language-modal-title': 'Choose Language'
         },
         bg: {
           'site-title': 'Риболовни възли',
@@ -547,8 +611,6 @@
           'filter-difficulty': 'Трудност: {value}',
           'filter-strength': 'Якост: {value}',
           'filter-use-case': 'Приложение: {value}',
-
-          'language-modal-title': 'Избери език'
         },
         de: {
           'site-title': 'Angelknoten',
@@ -615,8 +677,6 @@
           'filter-difficulty': 'Schwierigkeit: {value}',
           'filter-strength': 'Stärke: {value}',
           'filter-use-case': 'Anwendungsfall: {value}',
-
-          'language-modal-title': 'Sprache wählen'
         },
         fr: {
           'site-title': 'Nœuds de Pêche',
@@ -683,8 +743,6 @@
           'filter-difficulty': 'Difficulté : {value}',
           'filter-strength': 'Résistance : {value}',
           'filter-use-case': 'Cas d\'Usage : {value}',
-
-          'language-modal-title': 'Choisir la langue'
         },
         es: {
           'site-title': 'Nudos de Pesca',
@@ -751,8 +809,6 @@
           'filter-difficulty': 'Dificultad: {value}',
           'filter-strength': 'Resistencia: {value}',
           'filter-use-case': 'Caso de Uso: {value}',
-
-          'language-modal-title': 'Elegir idioma'
         },
         zh: {
           'site-title': '钓鱼结',
@@ -819,8 +875,6 @@
           'filter-difficulty': '难度：{value}',
           'filter-strength': '强度：{value}',
           'filter-use-case': '使用场景：{value}',
-
-          'language-modal-title': '选择语言'
         },
         ja: {
           'site-title': '釣り結び',
@@ -1028,540 +1082,216 @@
         }
       };
 
-      // Fishing Knots Data Structure
+      // Fishing Knots Data Structure - Organized by category
+      const knotCategories = {
+        HOOK_ATTACHMENT: 'hook-attachment',
+        LINE_TO_LINE: 'line-to-line',
+        LEADER: 'leader',
+        LOOP: 'loop',
+        SPECIALTY: 'specialty'
+      };
+
       const fishingKnots = [
+        // Hook Attachment Knots
         {
           id: 1,
           name: "Improved Clinch Knot",
-          nameBg: "Подобрен Clinch възел",
-          nameDe: "Verbesserter Clinch Knoten",
-          nameFr: "Nœud Clinch Amélioré",
-          nameEs: "Nudo Clinch Mejorado",
-          nameZh: "改良夹结",
-          nameJa: "改良クリンチ結び",
-          nameRu: "Улучшенный клинч узел",
-          nameEl: "Βελτιωμένος Clinch κόμπος",
+          category: knotCategories.HOOK_ATTACHMENT,
           difficulty: "Easy",
           strength: "Medium",
           tags: ["hook", "lure", "swivel", "beginner-friendly"],
           description: "The most popular knot for tying line to hook, lure or swivel. Easy to tie and reliable for most fishing situations.",
-          descriptionBg: "Най-популярният възел за връзване на корда към кука, примамка или върток. Лесен за завързване и надежден за повечето риболовни ситуации.",
-          descriptionDe: "Der beliebteste Knoten zum Verbinden von Schnur mit Haken, Köder oder Wirbel. Einfach zu knüpfen und zuverlässig für die meisten Angelsituationen.",
-          descriptionFr: "Le nœud le plus populaire pour attacher la ligne à l'hameçon, au leurre ou à l'émerillon. Facile à faire et fiable pour la plupart des situations de pêche.",
-          descriptionEs: "El nudo más popular para atar línea al anzuelo, señuelo o giratorio. Fácil de hacer y confiable para la mayoría de situaciones de pesca.",
-          descriptionZh: "最受欢迎的用于将鱼线系到鱼钩、饵料或转环的结法。易于打结，适用于大多数钓鱼情况。",
-          descriptionJa: "フック、ルアー、スイベルにラインを結ぶための最も人気な結び。結びやすく、ほとんどの釣りの状況で信頼できます。",
-          descriptionRu: "Самый популярный узел для привязывания лески к крючку, приманке или вертлюжку. Легко вяжется и надежен в большинстве рыболовных ситуаций.",
-          descriptionEl: "Ο πιο δημοφιλής κόμπος για το δέσιμο της πετονιάς στον γάντζο, το δόλωμα ή τον στροφέα. Εύκολο στο δέσιμο και αξιόπιστο για τις περισσότερες καταστάσεις ψαρέματος.",
           videoId: "6QbJfpsGpmM"
         },
+        // Leader Connection Knots
         {
           id: 2,
           name: "FG Knot",
-          nameBg: "FG възел",
-          nameDe: "FG Knoten",
-          nameFr: "Nœud FG",
-          nameEs: "Nudo FG",
-          nameZh: "FG结",
-          nameJa: "FG結び",
-          nameRu: "FG узел",
-          nameEl: "FG κόμπος",
+          category: knotCategories.LEADER,
           difficulty: "Hard",
           strength: "High",
           tags: ["braid-to-fluoro", "braid-to-mono", "leader", "line-to-line"],
           description: "Very strong leader knot that joins braided line to fluorocarbon or monofilament leader. Preferred by many professional anglers.",
-          descriptionBg: "Много як възел за повод, който свързва плетена корда към флуорокарбонов или монофилен повод. Предпочитан от много професионални рибари.",
-          descriptionDe: "Sehr starker Vorfachknoten, der geflochtene Schnur mit Fluorocarbon- oder Monofilament-Vorfach verbindet. Von vielen professionellen Anglern bevorzugt.",
-          descriptionFr: "Nœud de bas de ligne très résistant qui joint la tresse au bas de ligne en fluorocarbone ou monofilament. Préféré par de nombreux pêcheurs professionnels.",
-          descriptionEs: "Nudo de líder muy fuerte que une línea trenzada a líder de fluorocarbono o monofilamento. Preferido por muchos pescadores profesionales.",
-          descriptionZh: "非常坚固的前导结，连接编织线到氟碳或单丝前导。许多专业钓鱼者首选。",
-          descriptionJa: "非常に強いリーダー結びで、編み込みラインをフルオロカーボンまたはモノフィラメントリーダーに接続します。多くのプロの釣り人に好まれています。",
-          descriptionRu: "Очень прочный поводковый узел, соединяющий плетеную леску с флюорокарбоновым или монофильным поводком. Предпочитается многими профессиональными рыболовами.",
-          descriptionEl: "Πολύ δυνατός κόμπος οδηγού που ενώνει πλεχτή πετονιά με φλουοροκαρβονικό ή μονοφιλαμέντο οδηγό. Προτιμάται από πολλούς επαγγελματίες ψαράδες.",
           videoId: "ZPTzkep9xlI",
           time: 60
         },
         {
           id: 3,
           name: "Surgeon's Knot",
-          nameBg: "Surgeon's възел",
-          nameDe: "Chirurgen Knoten",
-          nameFr: "Nœud du Chirurgien",
-          nameEs: "Nudo del Cirujano",
-          nameZh: "外科医生结",
-          nameJa: "外科医結び",
-          nameRu: "Хирургический узел",
-          nameEl: "Κόμπος του Χειρούργου",
+          category: knotCategories.LINE_TO_LINE,
           difficulty: "Easy",
           strength: "High",
           tags: ["line-to-line", "leader", "quick-tie"],
           description: "Easy knot to join two lines of moderately unequal size. Quick to tie and very reliable.",
-          descriptionBg: "Лесен възел за свързване на две корди с умерено различен размер. Бърз за завързване и много надежден.",
-          descriptionDe: "Einfacher Knoten zum Verbinden von zwei Schnüren mit mäßig unterschiedlicher Stärke. Schnell zu knüpfen und sehr zuverlässig.",
-          descriptionFr: "Nœud facile pour joindre deux lignes de taille modérément inégale. Rapide à faire et très fiable.",
-          descriptionEs: "Nudo fácil para unir dos líneas de tamaño moderadamente desigual. Rápido de hacer y muy confiable.",
-          descriptionZh: "用于连接两根大小适度不等的鱼线的简单结法。快速打结，非常可靠。",
-          descriptionJa: "中程度に異なるサイズの二本のラインを接続する簡単な結び。結ぶのが早く、非常に信頼できます。",
-          descriptionRu: "Простой узел для соединения двух лесок умеренно разного размера. Быстро вяжется и очень надежен.",
-          descriptionEl: "Εύκολος κόμπος για την ένωση δύο πετονιών μετρίως άνισου μεγέθους. Γρήγορος στο δέσιμο και πολύ αξιόπιστος.",
           videoId: "Tmz25DTGgnk"
         },
         {
           id: 4,
           name: "Alberto Knot",
-          nameBg: "Alberto възел",
-          nameDe: "Alberto Knoten",
-          nameFr: "Nœud Alberto",
-          nameEs: "Nudo Alberto",
-          nameZh: "Alberto结",
-          nameJa: "アルベルト結び",
-          nameRu: "Альберто узел",
-          nameEl: "Alberto κόμπος",
+          category: knotCategories.LEADER,
           difficulty: "Medium",
           strength: "High",
           tags: ["braid-to-fluoro", "braid-to-mono", "leader", "line-to-line"],
           description: "Excellent knot for connecting braided line to fluorocarbon or monofilament leader. Easier to tie than the FG knot.",
-          descriptionBg: "Отличен възел за свързване на плетена корда към флуорокарбонов или монофилен повод. По-лесен за завързване от FG възела.",
-          descriptionDe: "Ausgezeichneter Knoten zum Verbinden von geflochtener Schnur mit Fluorocarbon- oder Monofilament-Vorfach. Einfacher zu knüpfen als der FG-Knoten.",
-          descriptionFr: "Excellent nœud pour connecter la tresse au bas de ligne en fluorocarbone ou monofilament. Plus facile à faire que le nœud FG.",
-          descriptionEs: "Excelente nudo para conectar línea trenzada a líder de fluorocarbono o monofilamento. Más fácil de hacer que el nudo FG.",
-          descriptionZh: "用于连接编织线到氟碳或单丝前导的优秀结法。比FG结更容易打结。",
-          descriptionJa: "編み込みラインをフルオロカーボンまたはモノフィラメントリーダーに接続する優秀な結び。FG結びより結びやすいです。",
-          descriptionRu: "Отличный узел для соединения плетеной лески с флюорокарбоновым или монофильным поводком. Легче вязать, чем FG узел.",
-          descriptionEl: "Εξαιρετικός κόμπος για τη σύνδεση πλεχτής πετονιάς με φλουοροκαρβονικό ή μονοφιλαμέντο οδηγό. Πιο εύκολος στο δέσιμο από τον FG κόμπο.",
           videoId: "zrVzp0n2gAw"
         },
         {
           id: 5,
           name: "Palomar Knot",
-          nameBg: "Palomar възел",
-          nameDe: "Palomar Knoten",
-          nameFr: "Nœud Palomar",
-          nameEs: "Nudo Palomar",
-          nameZh: "Palomar结",
-          nameJa: "パロマー結び",
-          nameRu: "Паломар узел",
-          nameEl: "Palomar κόμπος",
+          category: knotCategories.HOOK_ATTACHMENT,
           difficulty: "Easy",
           strength: "High",
           tags: ["hook", "lure", "braid", "strong"],
           description: "Best knot for attaching braided line to a hook. Very strong and maintains most of the line's original strength.",
-          descriptionBg: "Най-добрият възел за прикрепване на плетена корда към кука. Много як и запазва голяма част от първоначалната якост на кордата.",
-          descriptionDe: "Bester Knoten zum Befestigen von geflochtener Schnur an einem Haken. Sehr stark und behält den größten Teil der ursprünglichen Schnurstärke.",
-          descriptionFr: "Meilleur nœud pour attacher la tresse à un hameçon. Très résistant et maintient la plupart de la résistance originale de la ligne.",
-          descriptionEs: "Mejor nudo para unir línea trenzada a un anzuelo. Muy fuerte y mantiene la mayor parte de la resistencia original de la línea.",
-          descriptionZh: "将编织线连接到鱼钩的最佳结法。非常坚固，保持大部分鱼线的原始强度。",
-          descriptionJa: "編み込みラインをフックに取り付けるための最良の結び。非常に強く、ラインの元の強度のほとんどを維持します。",
-          descriptionRu: "Лучший узел для привязывания плетеной лески к крючку. Очень прочный и сохраняет большую часть первоначальной прочности лески.",
-          descriptionEl: "Καλύτερος κόμπος για το προσάρτημα πλεχτής πετονιάς σε γάντζο. Πολύ δυνατός και διατηρεί το μεγαλύτερο μέρος της αρχικής αντοχής της πετονιάς.",
           videoId: "uWw_f7CQQLg"
         },
         {
           id: 6,
           name: "Uni Knot",
-          nameBg: "Uni възел",
-          nameDe: "Uni Knoten",
-          nameFr: "Nœud Uni",
-          nameEs: "Nudo Uni",
-          nameZh: "万能结",
-          nameJa: "ユニ結び",
-          nameRu: "Юни узел",
-          nameEl: "Uni κόμπος",
           difficulty: "Easy",
           strength: "Medium",
           tags: ["hook", "lure", "swivel", "versatile"],
           description: "Versatile knot that can be used for hooks, lures, and swivels. Easy to tie and adjust.",
-          descriptionBg: "Универсален възел, който може да се използва за куки, примамки и въртоци. Лесен за завързване и регулиране.",
-          descriptionDe: "Vielseitiger Knoten, der für Haken, Köder und Wirbel verwendet werden kann. Einfach zu knüpfen und anzupassen.",
-          descriptionFr: "Nœud polyvalent qui peut être utilisé pour les hameçons, leurres et émerillons. Facile à faire et à ajuster.",
-          descriptionEs: "Nudo versátil que puede usarse para anzuelos, señuelos y giratorios. Fácil de hacer y ajustar.",
-          descriptionZh: "多功能结法，可用于鱼钩、饵料和转环。易于打结和调整。",
-          descriptionJa: "フック、ルアー、スイベルに使用できる多用途な結び。結びやすく調整も簡単です。",
-          descriptionRu: "Универсальный узел, который можно использовать для крючков, приманок и вертлюжков. Легко вязать и регулировать.",
-          descriptionEl: "Ευέλικτος κόμπος που μπορεί να χρησιμοποιηθεί για γάντζους, δολώματα και στροφείς. Εύκολος στο δέσιμο και τη ρύθμιση.",
           videoId: "f1pFMWc0ZP0"
         },
         {
           id: 7,
           name: "Blood Knot",
-          nameBg: "Blood възел",
-          nameDe: "Blutknoten",
-          nameFr: "Nœud de Sang",
-          nameEs: "Nudo de Sangre",
-          nameZh: "血结",
-          nameJa: "ブラッド結び",
-          nameRu: "Кровяной узел",
-          nameEl: "Κόμπος Αίματος",
           difficulty: "Medium",
           strength: "High",
           tags: ["line-to-line", "similar-diameter", "fly-fishing"],
           description: "One of the best knots for joining two lines of similar diameter. Popular in fly fishing.",
-          descriptionBg: "Един от най-добрите възли за свързване на две корди с подобен диаметър. Популярен в мухарския риболов.",
-          descriptionDe: "Einer der besten Knoten zum Verbinden zweier Schnüre mit ähnlichem Durchmesser. Beliebt beim Fliegenfischen.",
-          descriptionFr: "Un des meilleurs nœuds pour joindre deux lignes de diamètre similaire. Populaire en pêche à la mouche.",
-          descriptionEs: "Uno de los mejores nudos para unir dos líneas de diámetro similar. Popular en pesca con mosca.",
-          descriptionZh: "连接两根直径相似鱼线的最佳结法之一。在飞钓中很受欢迎。",
-          descriptionJa: "同様の太さの二本のラインを接続するための最良の結びの一つ。フライフィッシングで人気です。",
-          descriptionRu: "Один из лучших узлов для соединения двух лесок одинакового диаметра. Популярен в нахлыстовой рыбалке.",
-          descriptionEl: "Ένας από τους καλύτερους κόμπους για την ένωση δύο πετονιών παρόμοιας διαμέτρου. Δημοφιλής στο ψάρεμα με μύγα.",
           videoId: "__OX3jK62Fo"
         },
         {
           id: 8,
           name: "Speed blood knot",
-          nameBg: "Бърз blood възел",
-          nameDe: "Schneller Blutknoten",
-          nameFr: "Nœud de Sang Rapide",
-          nameEs: "Nudo de Sangre Rápido",
-          nameZh: "快速血结",
-          nameJa: "スピードブラッド結び",
-          nameRu: "Быстрый кровяной узел",
-          nameEl: "Γρήγορος Κόμπος Αίματος",
           difficulty: "Easy",
           strength: "High",
           tags: ["line-to-line", "blood-knot"],
           description: "A quick and easy way to tie two lines together. Perfect for when you need to change leaders quickly.",
-          descriptionBg: "Бърз и лесен начин за свързване на две корди. Перфектен когато трябва да смените поводи бързо.",
-          descriptionDe: "Eine schnelle und einfache Methode, zwei Schnüre zu verbinden. Perfekt, wenn Sie Vorfächer schnell wechseln müssen.",
-          descriptionFr: "Une façon rapide et facile de relier deux lignes. Parfait quand vous devez changer de bas de ligne rapidement.",
-          descriptionEs: "Una forma rápida y fácil de atar dos líneas juntas. Perfecto cuando necesita cambiar líderes rápidamente.",
-          descriptionZh: "快速简单的两根鱼线连接方法。当您需要快速更换前导时的完美选择。",
-          descriptionJa: "二本のラインを素早く簡単に結ぶ方法。リーダーを素早く交換する必要がある時に最適です。",
-          descriptionRu: "Быстрый и простой способ соединить две лески. Идеально подходит для быстрой смены поводков.",
-          descriptionEl: "Ένας γρήγορος και εύκολος τρόπος να δέσετε δύο πετονιές μαζί. Τέλειος όταν χρειάζεται να αλλάξετε οδηγούς γρήγορα.",
           videoId: "KOZum2373iw"
         },
         {
           id: 9,
           name: "Double Uni Knot",
-          nameBg: "Двоен Uni възел",
-          nameDe: "Doppelter Uni Knoten",
-          nameFr: "Nœud Uni Double",
-          nameEs: "Nudo Uni Doble",
-          nameZh: "双万能结",
-          nameJa: "ダブルユニ結び",
-          nameRu: "Двойной Юни узел",
-          nameEl: "Διπλός Uni κόμπος",
           difficulty: "Medium",
           strength: "High",
           tags: ["braid-to-mono", "braid-to-fluoro", "line-to-line", "reliable"],
           description: "Reliable knot for connecting braided line to monofilament or fluorocarbon. Good alternative to the FG knot.",
-          descriptionBg: "Надежден възел за свързване на плетена корда към монофилна или флуорокарбонова. Добра алтернатива на FG възела.",
-          descriptionDe: "Zuverlässiger Knoten zum Verbinden von geflochtener Schnur mit Monofilament oder Fluorocarbon. Gute Alternative zum FG-Knoten.",
-          descriptionFr: "Nœud fiable pour connecter la tresse au monofilament ou fluorocarbone. Bonne alternative au nœud FG.",
-          descriptionEs: "Nudo confiable para conectar línea trenzada a monofilamento o fluorocarbono. Buena alternativa al nudo FG.",
-          descriptionZh: "用于连接编织线到单丝或氟碳线的可靠结法。FG结的良好替代品。",
-          descriptionJa: "編み込みラインをモノフィラメントまたはフルオロカーボンに接続する信頼できる結び。FG結びの良い代替品です。",
-          descriptionRu: "Надежный узел для соединения плетеной лески с монофильной или флюорокарбоновой. Хорошая альтернатива FG узлу.",
-          descriptionEl: "Αξιόπιστος κόμπος για τη σύνδεση πλεχτής πετονιάς με μονοφιλαμέντο ή φλουοροκαρβονικό. Καλή εναλλακτική στον FG κόμπο.",
           videoId: "6VgQLBpwJUY"
         },
         {
           id: 10,
           name: "Rapala Knot",
-          nameBg: "Rapala възел",
-          nameDe: "Rapala Knoten",
-          nameFr: "Nœud Rapala",
-          nameEs: "Nudo Rapala",
-          nameZh: "Rapala结",
-          nameJa: "ラパラ結び",
-          nameRu: "Рапала узел",
-          nameEl: "Rapala κόμπος",
           difficulty: "Medium",
           strength: "High",
           tags: ["lure", "hook", "loop", "action-preserving"],
           description: "A non-slip loop knot that allows lures to move more freely, enhancing their action in the water.",
-          descriptionBg: "Възел с примка без плъзгане, който позволява на примамките да се движат по-свободно, подобрявайки действието им във водата.",
-          descriptionDe: "Ein rutschfester Schlingenknoten, der Ködern mehr Bewegungsfreiheit ermöglicht und ihre Aktion im Wasser verbessert.",
-          descriptionFr: "Un nœud à boucle antidérapant qui permet aux leurres de bouger plus librement, améliorant leur action dans l'eau.",
-          descriptionEs: "Un nudo de lazo antideslizante que permite a los señuelos moverse más libremente, mejorando su acción en el agua.",
-          descriptionZh: "一种防滑环结，让饵料在水中更自由地移动，增强其动作效果。",
-          descriptionJa: "ルアーがより自由に動くことを可能にする滑らないループ結びで、水中でのアクションを向上させます。",
-          descriptionRu: "Нескользящий петлевой узел, позволяющий приманкам двигаться более свободно, улучшая их игру в воде.",
-          descriptionEl: "Ένας αντιολισθητικός κόμπος θηλιάς που επιτρέπει στα δολώματα να κινούνται πιο ελεύθερα, βελτιώνοντας τη δράση τους στο νερό.",
           videoId: "rc55L3AHA0s"
         },
         {
           id: 11,
           name: "Albright Knot",
-          nameBg: "Albright възел",
-          nameDe: "Albright Knoten",
-          nameFr: "Nœud Albright",
-          nameEs: "Nudo Albright",
-          nameZh: "Albright结",
-          nameJa: "アルブライト結び",
-          nameRu: "Альбрайт узел",
-          nameEl: "Albright κόμπος",
           difficulty: "Medium",
           strength: "High",
           tags: ["line-to-line", "different-diameter", "leader"],
           description: "Used to join different types or thicknesses of fishing line. Great for connecting heavy leader to lighter main line.",
-          descriptionBg: "Използва се за свързване на различни типове или дебелини риболовна корда. Чудесен за свързване на тежък повод към по-лека основна корда.",
-          descriptionDe: "Wird verwendet, um verschiedene Arten oder Stärken von Angelschnur zu verbinden. Großartig zum Verbinden schwerer Vorfächer mit leichterer Hauptschnur.",
-          descriptionFr: "Utilisé pour joindre différents types ou épaisseurs de ligne de pêche. Excellent pour connecter un bas de ligne lourd à une ligne principale plus légère.",
-          descriptionEs: "Se usa para unir diferentes tipos o grosores de línea de pesca. Excelente para conectar líder pesado a línea principal más ligera.",
-          descriptionZh: "用于连接不同类型或粗细的钓鱼线。非常适合将重型前导连接到较轻的主线。",
-          descriptionJa: "異なる種類や太さの釣り糸を接続するために使用されます。重いリーダーを軽いメインラインに接続するのに最適です。",
-          descriptionRu: "Используется для соединения различных типов или толщин рыболовной лески. Отлично подходит для соединения тяжелого поводка с более легкой основной леской.",
-          descriptionEl: "Χρησιμοποιείται για να ενώσει διαφορετικούς τύπους ή πάχη πετονιάς ψαρέματος. Εξαιρετικός για τη σύνδεση βαριού οδηγού με ελαφρύτερη κύρια πετονιά.",
           videoId: "eKYZL9ETWk4"
         },
         {
           id: 12,
           name: "Perfection Loop",
-          nameBg: "Перфектна примка",
-          nameDe: "Perfektionsschlinge",
-          nameFr: "Boucle de Perfection",
-          nameEs: "Lazo de Perfección",
-          nameZh: "完美环",
-          nameJa: "パーフェクションループ",
-          nameRu: "Совершенная петля",
-          nameEl: "Τέλεια Θηλιά",
           difficulty: "Medium",
           strength: "High",
           tags: ["loop", "fly-fishing", "leader"],
           description: "Creates a small, strong loop at the end of a line. Perfect for loop-to-loop connections.",
-          descriptionBg: "Създава малка, якa примка в края на кордата. Перфектна за връзки примка към примка.",
-          descriptionDe: "Erstellt eine kleine, starke Schlinge am Ende einer Schnur. Perfekt für Schlinge-zu-Schlinge-Verbindungen.",
-          descriptionFr: "Crée une petite boucle solide à l'extrémité d'une ligne. Parfaite pour les connexions boucle à boucle.",
-          descriptionEs: "Crea un lazo pequeño y fuerte al final de una línea. Perfecto para conexiones de lazo a lazo.",
-          descriptionZh: "在线的末端创建一个小而坚固的环。非常适合环到环的连接。",
-          descriptionJa: "ラインの端に小さく強いループを作ります。ループ同士の接続に最適です。",
-          descriptionRu: "Создает маленькую, прочную петлю в конце лески. Идеально подходит для соединения петля к петле.",
-          descriptionEl: "Δημιουργεί μια μικρή, δυνατή θηλιά στο τέλος μιας πετονιάς. Τέλεια για συνδέσεις θηλιά προς θηλιά.",
           videoId: "nyzAbhq-Oxc"
         },
         {
           id: 13,
           name: "Trilene Knot",
-          nameBg: "Trilene възел",
-          nameDe: "Trilene Knoten",
-          nameFr: "Nœud Trilene",
-          nameEs: "Nudo Trilene",
-          nameZh: "Trilene结",
-          nameJa: "トライリーン結び",
-          nameRu: "Трилин узел",
-          nameEl: "Trilene κόμπος",
           difficulty: "Easy",
           strength: "High",
           tags: ["hook", "mono", "strong"],
           description: "Strong knot for joining monofilament line to hooks. Passes through the hook eye twice for extra security.",
-          descriptionBg: "Як възел за свързване на монофилна корда към куки. Преминава през окото на куката два пъти за допълнителна сигурност.",
-          descriptionDe: "Starker Knoten zum Verbinden von Monofilamentschnur mit Haken. Geht zweimal durch das Hakenöhr für zusätzliche Sicherheit.",
-          descriptionFr: "Nœud solide pour joindre la ligne monofilament aux hameçons. Passe deux fois dans l'œil de l'hameçon pour plus de sécurité.",
-          descriptionEs: "Nudo fuerte para unir línea de monofilamento a anzuelos. Pasa por el ojo del anzuelo dos veces para mayor seguridad.",
-          descriptionZh: "用于将单丝线连接到鱼钩的强力结法。通过钩眼两次以获得额外安全性。",
-          descriptionJa: "モノフィラメントラインをフックに接続する強い結び。追加の安全性のためにフックアイを二度通します。",
-          descriptionRu: "Прочный узел для соединения монофильной лески с крючками. Проходит через ушко крючка дважды для дополнительной безопасности.",
-          descriptionEl: "Δυνατός κόμπος για την ένωση μονοφιλαμέντου πετονιάς με γάντζους. Περνά από το μάτι του γαντζιού δύο φορές για επιπλέον ασφάλεια.",
           videoId: "cC93iQWUJUY"
         },
         {
           id: 14,
           name: "Bimini Twist",
-          nameBg: "Bimini усукване",
-          nameDe: "Bimini Verdrehung",
-          nameFr: "Torsion Bimini",
-          nameEs: "Torsión Bimini",
-          nameZh: "比米尼捻转",
-          nameJa: "ビミニツイスト",
-          nameRu: "Бимини твист",
-          nameEl: "Bimini Στρίψιμο",
           difficulty: "Hard",
           strength: "High",
           tags: ["double-line", "loop", "offshore", "leader"],
           description: "Creates a strong double-line leader and is excellent for loop-to-loop connections. Popular in offshore fishing.",
-          descriptionBg: "Създава як двойнокорден повод и е отличен за връзки примка към примка. Популярен в морския риболов.",
-          descriptionDe: "Erstellt einen starken doppelschnurigen Vorfach und ist ausgezeichnet für Schlinge-zu-Schlinge-Verbindungen. Beliebt beim Hochseeangeln.",
-          descriptionFr: "Crée un bas de ligne double résistant et est excellent pour les connexions boucle à boucle. Populaire en pêche hauturière.",
-          descriptionEs: "Crea un líder de línea doble fuerte y es excelente para conexiones de lazo a lazo. Popular en pesca de altura.",
-          descriptionZh: "创建坚固的双线前导，非常适合环到环连接。在远海钓鱼中很受欢迎。",
-          descriptionJa: "強いダブルラインリーダーを作り、ループ同士の接続に優れています。沖釣りで人気です。",
-          descriptionRu: "Создает прочный двухлесочный поводок и отлично подходит для соединений петля к петле. Популярен в морской рыбалке.",
-          descriptionEl: "Δημιουργεί έναν δυνατό διπλό οδηγό και είναι εξαιρετικός για συνδέσεις θηλιά προς θηλιά. Δημοφιλής στο ψάρεμα ανοιχτής θάλασσας.",
           videoId: "jahddqzKhLY"
         },
         {
           id: 15,
           name: "Snell Knot",
-          nameBg: "Snell възел",
-          nameDe: "Snell Knoten",
-          nameFr: "Nœud Snell",
-          nameEs: "Nudo Snell",
-          nameZh: "Snell结",
-          nameJa: "スネル結び",
-          nameRu: "Снелл узел",
-          nameEl: "Snell κόμπος",
           difficulty: "Medium",
           strength: "High",
           tags: ["hook", "leader", "direct-tie"],
           description: "Allows leader or tippet to be tied directly to a hook. Provides excellent hook-setting power.",
-          descriptionBg: "Позволява поводът или влакното да се завърже директно към куката. Осигурява отлична сила за закачане.",
-          descriptionDe: "Ermöglicht es, Vorfach oder Tippet direkt an einen Haken zu binden. Bietet ausgezeichnete Hakensetzungskraft.",
-          descriptionFr: "Permet au bas de ligne ou au tippet d'être attaché directement à un hameçon. Fournit une excellente puissance de ferrage.",
-          descriptionEs: "Permite que el líder o tippet se ate directamente a un anzuelo. Proporciona excelente poder de enganche.",
-          descriptionZh: "允许前导或小线直接系在鱼钩上。提供出色的刺鱼力量。",
-          descriptionJa: "リーダーやティペットを直接フックに結ぶことができます。優秀なフッキングパワーを提供します。",
-          descriptionRu: "Позволяет привязать поводок или типпет непосредственно к крючку. Обеспечивает отличную силу подсечки.",
-          descriptionEl: "Επιτρέπει στον οδηγό ή το tippet να δεθεί απευθείας σε γάντζο. Παρέχει εξαιρετική δύναμη αγκίστρωσης.",
           videoId: "-_ftAGkewfE"
         },
         {
           id: 16,
           name: "Haywire Twist",
-          nameBg: "Haywire усукване",
-          nameDe: "Haywire Verdrehung",
-          nameFr: "Torsion Haywire",
-          nameEs: "Torsión Haywire",
-          nameZh: "钢丝扭转",
-          nameJa: "ヘイワイヤーツイスト",
-          nameRu: "Хейвайр твист",
-          nameEl: "Haywire Στρίψιμο",
           difficulty: "Medium",
           strength: "High",
           tags: ["wire", "leader", "offshore", "toothy-fish"],
           description: "Provides a strong connection for wire leader to hook or swivel. Essential for fish with sharp teeth.",
-          descriptionBg: "Осигурява якa връзка за метален повод към кука или върток. Необходимо за риби с остри зъби.",
-          descriptionDe: "Bietet eine starke Verbindung für Drahtvorfach zu Haken oder Wirbel. Unverzichtbar für Fische mit scharfen Zähnen.",
-          descriptionFr: "Fournit une connexion solide pour bas de ligne en fil vers hameçon ou émerillon. Essentiel pour les poissons aux dents acérées.",
-          descriptionEs: "Proporciona una conexión fuerte para líder de alambre a anzuelo o giratorio. Esencial para peces con dientes afilados.",
-          descriptionZh: "为钢丝前导到鱼钩或转环提供牢固连接。对于有尖牙的鱼类必不可少。",
-          descriptionJa: "ワイヤーリーダーをフックやスイベルに強固に接続します。鋭い歯を持つ魚に不可欠です。",
-          descriptionRu: "Обеспечивает прочное соединение проволочного поводка с крючком или вертлюжком. Необходим для рыб с острыми зубами.",
-          descriptionEl: "Παρέχει μια δυνατή σύνδεση για συρματένιο οδηγό προς γάντζο ή στροφέα. Απαραίτητο για ψάρια με κοφτερά δόντια.",
           videoId: "3J5yuXW4uR0"
         },
         {
           id: 17,
           name: "Dropper Loop",
-          nameBg: "Dropper примка",
-          nameDe: "Dropper Schlinge",
-          nameFr: "Boucle Dropper",
-          nameEs: "Lazo Dropper",
-          nameZh: "垂钓环",
-          nameJa: "ドロッパーループ",
-          nameRu: "Дроппер петля",
-          nameEl: "Dropper Θηλιά",
           difficulty: "Medium",
           strength: "Medium",
           tags: ["loop", "multiple-hooks", "bottom-fishing"],
           description: "Creates a loop anywhere along the fishing line, perfect for attaching additional hooks or weights.",
-          descriptionBg: "Създава примка навсякъде по риболовната корда, перфектна за прикрепване на допълнителни куки или тежести.",
-          descriptionDe: "Erstellt eine Schlinge überall entlang der Angelschnur, perfekt zum Befestigen zusätzlicher Haken oder Gewichte.",
-          descriptionFr: "Crée une boucle n'importe où le long de la ligne de pêche, parfaite pour attacher des hameçons ou poids supplémentaires.",
-          descriptionEs: "Crea un lazo en cualquier lugar a lo largo de la línea de pesca, perfecto para unir anzuelos o pesos adicionales.",
-          descriptionZh: "在钓鱼线的任何位置创建环，非常适合连接额外的鱼钩或重物。",
-          descriptionJa: "釣り糸の任意の場所にループを作り、追加のフックやオモリを取り付けるのに最適です。",
-          descriptionRu: "Создает петлю в любом месте рыболовной лески, идеально подходит для крепления дополнительных крючков или грузил.",
-          descriptionEl: "Δημιουργεί μια θηλιά οπουδήποτε κατά μήκος της πετονιάς ψαρέματος, τέλεια για το προσάρτημα επιπλέον γαντζιών ή βαρών.",
           videoId: "HYvd6F-MnzQ"
         },
         {
           id: 18,
           name: "Nail Knot",
-          nameBg: "Nail възел",
-          nameDe: "Nagel Knoten",
-          nameFr: "Nœud du Clou",
-          nameEs: "Nudo del Clavo",
-          nameZh: "钉结",
-          nameJa: "ネイル結び",
-          nameRu: "Гвоздевой узел",
-          nameEl: "Κόμπος Καρφιού",
           difficulty: "Hard",
           strength: "High",
           tags: ["fly-fishing", "line-to-line", "leader"],
           description: "Used to join two lines of different diameters. Popular in fly fishing for attaching leader to fly line.",
-          descriptionBg: "Използва се за свързване на две корди с различни диаметри. Популярен в мухарския риболов за прикрепване на повод към мухарска корда.",
-          descriptionDe: "Wird verwendet, um zwei Schnüre unterschiedlicher Durchmesser zu verbinden. Beliebt beim Fliegenfischen zum Befestigen von Vorfach an Fliegenschnur.",
-          descriptionFr: "Utilisé pour joindre deux lignes de diamètres différents. Populaire en pêche à la mouche pour attacher le bas de ligne à la soie.",
-          descriptionEs: "Se usa para unir dos líneas de diferentes diámetros. Popular en pesca con mosca para unir líder a línea de mosca.",
-          descriptionZh: "用于连接两根不同直径的线。在飞钓中用于将前导连接到飞钓线很受欢迎。",
-          descriptionJa: "異なる太さの二本のラインを接続するために使用されます。フライフィッシングでリーダーをフライラインに取り付けるのに人気です。",
-          descriptionRu: "Используется для соединения двух лесок разного диаметра. Популярен в нахлыстовой рыбалке для крепления поводка к нахлыстовому шнуру.",
-          descriptionEl: "Χρησιμοποιείται για να ενώσει δύο πετονιές διαφορετικών διαμέτρων. Δημοφιλής στο ψάρεμα με μύγα για το προσάρτημα οδηγού σε σπάγκο μύγας.",
           videoId: "D5U3E8590vA"
         },
         {
           id: 19,
           name: "Arbor Knot",
-          nameBg: "Arbor възел",
-          nameDe: "Arbor Knoten",
-          nameFr: "Nœud d'Arbre",
-          nameEs: "Nudo del Árbol",
-          nameZh: "轴结",
-          nameJa: "アーバー結び",
-          nameRu: "Арбор узел",
-          nameEl: "Arbor κόμπος",
           difficulty: "Easy",
           strength: "Low",
           tags: ["reel", "backing", "spool"],
           description: "Used to attach your fishing line to the reel spool center. Simple and effective for this specific purpose.",
-          descriptionBg: "Използва се за прикрепване на риболовната корда към центъра на макарната шпула. Прост и ефективен за тази специфична цел.",
-          descriptionDe: "Wird verwendet, um Ihre Angelschnur am Rollenzentrum zu befestigen. Einfach und effektiv für diesen spezifischen Zweck.",
-          descriptionFr: "Utilisé pour attacher votre ligne de pêche au centre du tambour du moulinet. Simple et efficace pour cet usage spécifique.",
-          descriptionEs: "Se usa para unir su línea de pesca al centro del carrete. Simple y efectivo para este propósito específico.",
-          descriptionZh: "用于将钓鱼线连接到卷轴轴心。对于这个特定目的简单有效。",
-          descriptionJa: "釣り糸をリールスプールの中心に取り付けるために使用されます。この特定の目的には簡単で効果的です。",
-          descriptionRu: "Используется для крепления рыболовной лески к центру шпули катушки. Простой и эффективный для этой конкретной цели.",
-          descriptionEl: "Χρησιμοποιείται για να προσαρτήσει την πετονιά ψαρέματός σας στο κέντρο της σπείρας του μηχανισμού. Απλός και αποτελεσματικός για αυτόν τον συγκεκριμένο σκοπό.",
           videoId: "IcoAF_jspGo"
         },
         {
           id: 20,
           name: "Loop to Loop Connection",
-          nameBg: "Връзка примка към примка",
-          nameDe: "Schlinge-zu-Schlinge-Verbindung",
-          nameFr: "Connexion Boucle à Boucle",
-          nameEs: "Conexión Lazo a Lazo",
-          nameZh: "环到环连接",
-          nameJa: "ループ同士の接続",
-          nameRu: "Соединение петля к петле",
-          nameEl: "Σύνδεση Θηλιά προς Θηλιά",
           difficulty: "Easy",
           strength: "High",
           tags: ["loop", "connection", "quick-change"],
           description: "Method of joining two loops together. Allows for quick leader changes and strong connections.",
-          descriptionBg: "Метод за свързване на две примки заедно. Позволява бърза смяна на поводи и яки връзки.",
-          descriptionDe: "Methode zum Verbinden zweier Schlingen. Ermöglicht schnelle Vorfachwechsel und starke Verbindungen.",
-          descriptionFr: "Méthode pour joindre deux boucles ensemble. Permet des changements rapides de bas de ligne et des connexions solides.",
-          descriptionEs: "Método para unir dos lazos juntos. Permite cambios rápidos de líder y conexiones fuertes.",
-          descriptionZh: "将两个环连接在一起的方法。允许快速更换前导和强力连接。",
-          descriptionJa: "二つのループを接続する方法。素早いリーダー交換と強固な接続を可能にします。",
-          descriptionRu: "Метод соединения двух петель вместе. Позволяет быструю смену поводков и прочные соединения.",
-          descriptionEl: "Μέθοδος ένωσης δύο θηλιών μαζί. Επιτρέπει γρήγορες αλλαγές οδηγών και δυνατές συνδέσεις.",
           videoId: "L3YBTzr5iDI"
         },
         {
           id: 21,
           name: "Orvis Knot",
-          nameBg: "Orvis възел",
-          nameDe: "Orvis Knoten",
-          nameFr: "Nœud Orvis",
-          nameEs: "Nudo Orvis",
-          nameZh: "Orvis结",
-          nameJa: "オービス結び",
-          nameRu: "Орвис узел",
-          nameEl: "Orvis κόμπος",
           difficulty: "Easy",
           strength: "High",
           tags: ["hook", "fly-fishing", "small", "strong"],
           description: "Small yet very strong knot to attach a hook to a line. Popular in fly fishing applications.",
-          descriptionBg: "Малък, но много як възел за прикрепване на кука към корда. Популярен в мухарския риболов.",
-          descriptionDe: "Kleiner, aber sehr starker Knoten zum Befestigen eines Hakens an einer Schnur. Beliebt bei Fliegenfischerei-Anwendungen.",
-          descriptionFr: "Nœud petit mais très résistant pour attacher un hameçon à une ligne. Populaire dans les applications de pêche à la mouche.",
-          descriptionEs: "Nudo pequeño pero muy fuerte para unir un anzuelo a una línea. Popular en aplicaciones de pesca con mosca.",
-          descriptionZh: "小巧但非常坚固的结法，用于将鱼钩连接到鱼线。在飞钓应用中很受欢迎。",
-          descriptionJa: "フックをラインに取り付ける小さくても非常に強い結び。フライフィッシングの用途で人気です。",
-          descriptionRu: "Маленький, но очень прочный узел для крепления крючка к леске. Популярен в применениях нахлыстовой рыбалки.",
-          descriptionEl: "Μικρός αλλά πολύ δυνατός κόμπος για το προσάρτημα γαντζιού σε πετονιά. Δημοφιλής σε εφαρμογές ψαρέματος με μύγα.",
           videoId: "E9W4BmrPUXA"
         }
       ];
 
       // DOM Elements
-      const languageFlag = document.getElementById('languageFlag');
-      const languageModal = document.getElementById('languageModal');
-      const closeLanguageModalBtn = document.getElementById('closeLanguageModal');
       const openSearchModalBtn = document.getElementById('openSearchModal');
       const searchModal = document.getElementById('searchModal');
       const closeSearchModalBtn = document.getElementById('closeSearchModal');
@@ -1575,80 +1305,25 @@
       const knotCount = document.getElementById('knotCount');
       const activeFilters = document.getElementById('activeFilters');
       const noResults = document.getElementById('noResults');
-      const modal = document.getElementById('knotModal');
-      const closeModal = document.getElementById('closeModal');
 
       // State
       let filteredKnots = [...fishingKnots];
 
-      // Language Functions
-      function getLanguageFlag(langCode) {
-        const flags = {
-          'en': '🇺🇸',
-          'bg': '🇧🇬',
-          'de': '🇩🇪',
-          'fr': '🇫🇷',
-          'es': '🇪🇸',
-          'zh': '🇨🇳',
-          'ja': '🇯🇵',
-          'ru': '🇷🇺',
-          'el': '🇬🇷'
-        };
-        return flags[langCode] || '🇺🇸';
-      }
-
-      function updateCurrentLanguageFlag() {
-        const currentFlag = document.getElementById('currentLanguageFlag');
-        if (currentFlag) {
-          currentFlag.textContent = getLanguageFlag(currentLanguage);
-        }
-      }
+      // Simplified translation system - using English as default
+      const currentLang = 'en';
 
       function translateText(key, replacements = {}) {
-        let text = translations[currentLanguage][key] || key;
-        Object.keys(replacements).forEach(placeholder => {
-          text = text.replace(`{${placeholder}}`, replacements[placeholder]);
-        });
+        const langData = translations[currentLang] || translations['en'];
+        let text = langData[key] || key;
+
+        // Simple template replacement
+        if (replacements) {
+          Object.entries(replacements).forEach(([placeholder, value]) => {
+            text = text.replace(new RegExp(`\\{${placeholder}\\}`, 'g'), value);
+          });
+        }
+
         return text;
-      }
-
-            function updatePageLanguage() {
-        // Update all elements with data-translate attribute
-        document.querySelectorAll('[data-translate]').forEach(element => {
-          const key = element.getAttribute('data-translate');
-          element.textContent = translateText(key);
-        });
-
-        // Update placeholder
-        const searchInputElement = document.getElementById('searchInput');
-        if (searchInputElement) {
-          searchInputElement.placeholder = translateText('search-placeholder');
-        }
-
-        // Update document language attribute
-        document.documentElement.lang = currentLanguage;
-
-        // Update SEO meta tags
-        updateSEOTags();
-
-        // Update current flag display
-        updateCurrentLanguageFlag();
-
-        // Update URL hash to reflect language change
-        const { knotSlug } = parseHashUrl();
-        if (knotSlug) {
-          // If we're viewing a knot, update the hash to include/exclude language
-          const newHash = currentLanguage === 'en' ? `#${knotSlug}` : `#${currentLanguage}/${knotSlug}`;
-          window.history.replaceState(null, null, newHash);
-        } else {
-          // If we're on the home page, just clear any query parameters for clean URL
-          const url = new URL(window.location);
-          url.search = '';
-          window.history.replaceState(null, null, url);
-        }
-
-        // Re-render knots to update their content and URLs with new language
-        renderKnots();
       }
 
       function updateSEOTags() {
@@ -1656,7 +1331,7 @@
         const { knotSlug } = parseHashUrl();
         let currentUrl = window.location.origin + window.location.pathname;
         if (knotSlug) {
-          currentUrl += currentLanguage === 'en' ? `#${knotSlug}` : `#${currentLanguage}/${knotSlug}`;
+          currentUrl += `#${knotSlug}`;
         }
 
         // Update page title
@@ -1699,103 +1374,30 @@
         }
       }
 
-
-
-      function saveLanguagePreference(language) {
-        try {
-          localStorage.setItem('fishing-knots-language', language);
-          return true;
-        } catch (e) {
-          // localStorage might be disabled or full
-          return false;
-        }
-      }
-
-      function getLanguagePreference() {
-        try {
-          return localStorage.getItem('fishing-knots-language');
-        } catch (e) {
-          // localStorage might be disabled
-          return null;
-        }
-      }
-
-                  function initializeLanguage() {
-        const urlParams = new URLSearchParams(window.location.search);
-        const langParam = urlParams.get('lang');
-        const savedLanguage = getLanguagePreference();
-
-        // Check if language is in the hash using new URL structure
-        const { language: hashLang } = parseHashUrl();
-
-        // Priority order: Hash language > URL parameter > Saved preference > Default (English)
-        if (hashLang && translations[hashLang]) {
-          // Hash language takes highest priority
-          currentLanguage = hashLang;
-          if (hashLang !== 'en' || !savedLanguage) {
-            saveLanguagePreference(hashLang);
-          }
-          // Update URL to clean format if needed
-          updateUrlForLanguage(hashLang);
-        } else if (langParam && translations[langParam]) {
-          // URL parameter takes second priority (for backward compatibility)
-          currentLanguage = langParam;
-          saveLanguagePreference(langParam);
-          // Convert query param to hash-based URL for consistency
-          convertQueryParamToHash(langParam);
-        } else if (savedLanguage && translations[savedLanguage]) {
-          // Use saved language preference
-          currentLanguage = savedLanguage;
-          // Update URL to reflect saved language if no URL language is specified
-          updateUrlForLanguage(savedLanguage);
-        } else {
-          // Default to English
-          currentLanguage = 'en';
-        }
-
-        updatePageLanguage();
-      }
-
       // Utility Functions
-      function getDifficultyColor(difficulty) {
-        switch(difficulty) {
-          case 'Easy': return 'bg-green-100 text-green-800';
-          case 'Medium': return 'bg-yellow-100 text-yellow-800';
-          case 'Hard': return 'bg-red-100 text-red-800';
-          default: return 'bg-gray-100 text-gray-800';
+      const colorMaps = {
+        difficulty: {
+          'Easy': 'bg-green-100 text-green-800',
+          'Medium': 'bg-yellow-100 text-yellow-800',
+          'Hard': 'bg-red-100 text-red-800'
+        },
+        strength: {
+          'High': 'bg-green-100 text-green-800',
+          'Medium': 'bg-yellow-100 text-yellow-800',
+          'Low': 'bg-red-100 text-red-800'
         }
-      }
+      };
 
-      function getStrengthColor(strength) {
-        switch(strength) {
-          case 'High': return 'bg-green-100 text-green-800';
-          case 'Medium': return 'bg-yellow-100 text-yellow-800';
-          case 'Low': return 'bg-red-100 text-red-800';
-          default: return 'bg-gray-100 text-gray-800';
-        }
-      }
+      const getColor = (type, value) => colorMaps[type][value] || 'bg-gray-100 text-gray-800';
 
-      function getTagDisplay(tag) {
-        return translateText(`tag-${tag}`) || tag;
-      }
-
-      function getKnotName(knot) {
-        const nameKey = `name${currentLanguage.charAt(0).toUpperCase() + currentLanguage.slice(1)}`;
-        return knot[nameKey] || knot.name;
-      }
-
-      function getKnotDescription(knot) {
-        const descKey = `description${currentLanguage.charAt(0).toUpperCase() + currentLanguage.slice(1)}`;
-        return knot[descKey] || knot.description;
-      }
-
-      function translateDifficulty(difficulty) {
-        return translateText(`difficulty-${difficulty.toLowerCase()}`) || difficulty;
-      }
-
-      function translateStrength(strength) {
-        return translateText(`strength-${strength.toLowerCase()}`) || strength;
-      }
+      // Simplified helper functions
+      const helpers = {
+        getTagDisplay: (tag) => translateText(`tag-${tag}`) || tag,
+        getKnotName: (knot) => knot.name,
+        getKnotDescription: (knot) => knot.description,
+        translateDifficulty: (difficulty) => translateText(`difficulty-${difficulty.toLowerCase()}`) || difficulty,
+        translateStrength: (strength) => translateText(`strength-${strength.toLowerCase()}`) || strength
+      };
 
       // Filter Management Functions
       function renderActiveFilters() {
@@ -1812,7 +1414,7 @@
         if (difficultyFilter.value) {
           filters.push({
             type: 'difficulty',
-            label: translateText('filter-difficulty', { value: translateDifficulty(difficultyFilter.value) }),
+            label: translateText('filter-difficulty', { value: helpers.translateDifficulty(difficultyFilter.value) }),
             value: difficultyFilter.value
           });
         }
@@ -1820,13 +1422,13 @@
         if (strengthFilter.value) {
           filters.push({
             type: 'strength',
-            label: translateText('filter-strength', { value: translateStrength(strengthFilter.value) }),
+            label: translateText('filter-strength', { value: helpers.translateStrength(strengthFilter.value) }),
             value: strengthFilter.value
           });
         }
 
         if (tagFilter.value) {
-          const tagText = getTagDisplay(tagFilter.value);
+          const tagText = helpers.getTagDisplay(tagFilter.value);
           filters.push({
             type: 'tag',
             label: translateText('filter-use-case', { value: tagText }),
@@ -1877,37 +1479,37 @@
       // Render Functions
       function renderKnot(knot) {
         const knotSlug = slugify(knot.name);
-        const knotUrl = currentLanguage === 'en' ? `#${knotSlug}` : `#${currentLanguage}/${knotSlug}`;
+        const knotUrl = `${knotSlug}.html`;
 
         return `
           <a href="${knotUrl}" class="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow block knot-card" data-knot-id="${knot.id}">
             <div class="p-6 flex flex-col h-full">
               <div class="flex-grow">
-                <h3 class="text-lg font-semibold text-gray-800 mb-3">${getKnotName(knot)}</h3>
+                <h3 class="text-lg font-semibold text-gray-800 mb-3">${helpers.getKnotName(knot)}</h3>
 
                 <div class="space-y-3 mb-4">
                   <div class="flex items-center justify-between">
                     <span class="text-sm text-gray-600">${translateText('modal-difficulty-label')}:</span>
-                    <span class="px-2 py-1 rounded-full text-xs font-medium ${getDifficultyColor(knot.difficulty)}">
-                      ${translateDifficulty(knot.difficulty)}
+                    <span class="px-2 py-1 rounded-full text-xs font-medium ${getColor('difficulty', knot.difficulty)}">
+                      ${helpers.translateDifficulty(knot.difficulty)}
                     </span>
                   </div>
 
                   <div class="flex items-center justify-between">
                     <span class="text-sm text-gray-600">${translateText('modal-strength-label')}:</span>
-                    <span class="px-2 py-1 rounded-full text-xs font-medium ${getStrengthColor(knot.strength)}">
-                      ${translateStrength(knot.strength)}
+                    <span class="px-2 py-1 rounded-full text-xs font-medium ${getColor('strength', knot.strength)}">
+                      ${helpers.translateStrength(knot.strength)}
                     </span>
                   </div>
                 </div>
 
                 <div class="mb-4">
-                  <p class="text-sm text-gray-600 line-clamp-3">${getKnotDescription(knot)}</p>
+                  <p class="text-sm text-gray-600 line-clamp-3">${helpers.getKnotDescription(knot)}</p>
                 </div>
 
                 <div class="flex flex-wrap gap-1 mb-4">
                   ${knot.tags.slice(0, 4).map(tag =>
-                    `<span class="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded-full">${getTagDisplay(tag)}</span>`
+                    `<span class="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded-full">${helpers.getTagDisplay(tag)}</span>`
                   ).join('')}
                   ${knot.tags.length > 4 ? `<span class="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded-full">+${knot.tags.length - 4}</span>` : ''}
                 </div>
@@ -1939,50 +1541,9 @@
         renderActiveFilters();
       }
 
-      // Modal Functions
-      function openModal(knot, updateHash = true) {
-        document.getElementById('modalTitle').textContent = getKnotName(knot);
-        document.getElementById('modalDifficulty').textContent = translateDifficulty(knot.difficulty);
-        document.getElementById('modalDifficulty').className = `inline-block px-3 py-1 rounded-full text-sm font-medium ${getDifficultyColor(knot.difficulty)}`;
 
-        document.getElementById('modalStrength').textContent = translateStrength(knot.strength);
-        document.getElementById('modalStrength').className = `inline-block px-3 py-1 rounded-full text-sm font-medium ${getStrengthColor(knot.strength)}`;
 
-        document.getElementById('modalTags').innerHTML = knot.tags.map(tag =>
-          `<span class="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded-full">${getTagDisplay(tag)}</span>`
-        ).join('');
-
-        document.getElementById('modalDescription').textContent = getKnotDescription(knot);
-
-        // Set YouTube embed URL
-        const videoUrl = `https://www.youtube.com/embed/${knot.videoId}?autoplay=1&rel=0&t=${knot.time ?? 0}`;
-
-        document.getElementById('modalVideo').src = videoUrl;
-
-        modal.classList.remove('hidden');
-        document.body.style.overflow = 'hidden';
-
-        // Update URL hash
-        if (updateHash) {
-          const knotSlug = slugify(knot.name);
-          const newHash = currentLanguage === 'en' ? `#${knotSlug}` : `#${currentLanguage}/${knotSlug}`;
-          window.history.pushState(null, null, newHash);
-        }
-      }
-
-      function closeModalFunction(updateHash = true) {
-        modal.classList.add('hidden');
-        document.body.style.overflow = 'auto';
-        // Stop video playback
-        document.getElementById('modalVideo').src = '';
-
-        // Update URL hash
-        if (updateHash) {
-          window.history.pushState(null, null, window.location.pathname + window.location.search);
-        }
-      }
-
-      // URL Hash Functions
+      // URL Helper Functions
       function slugify(text) {
         return text
           .toLowerCase()
@@ -1990,125 +1551,6 @@
           .replace(/\s+/g, '-')     // Replace spaces with hyphens
           .replace(/--+/g, '-')     // Replace multiple hyphens with single hyphen
           .trim();
-      }
-
-      function parseHashUrl() {
-        const hash = window.location.hash;
-        if (!hash || hash === '#') {
-          return { language: null, knotSlug: null };
-        }
-
-        // Remove the # and split by /
-        const path = hash.substring(1);
-        const segments = path.split('/').filter(segment => segment.length > 0);
-
-        if (segments.length === 0) {
-          return { language: null, knotSlug: null };
-        }
-
-        // Check if first segment is a language
-        if (translations[segments[0]]) {
-          if (segments.length >= 2) {
-            // Language with knot: #es/improved-clinch-knot
-            return { language: segments[0], knotSlug: segments[1] };
-          } else {
-            // Language only: #es/
-            return { language: segments[0], knotSlug: null };
-          }
-        }
-
-        // Check if first segment is a knot (no language specified)
-        if (segments.length === 1) {
-          return { language: null, knotSlug: segments[0] };
-        }
-
-        // If first segment is not a language but we have 2+ segments, treat first as knot
-        return { language: null, knotSlug: segments[0] };
-      }
-
-      // Helper function to update URL for language consistency
-      function updateUrlForLanguage(language) {
-        const { knotSlug } = parseHashUrl();
-        const currentUrl = new URL(window.location);
-
-        // Remove lang query parameter if it exists
-        currentUrl.searchParams.delete('lang');
-
-        // Update hash based on language and current knot
-        if (knotSlug) {
-          currentUrl.hash = language === 'en' ? `#${knotSlug}` : `#${language}/${knotSlug}`;
-        } else {
-          currentUrl.hash = language === 'en' ? '' : `#${language}`;
-        }
-
-        // Update URL without page reload
-        window.history.replaceState(null, '', currentUrl.toString());
-      }
-
-      // Helper function to convert query parameter to hash-based URL
-      function convertQueryParamToHash(language) {
-        const { knotSlug } = parseHashUrl();
-        const currentUrl = new URL(window.location);
-
-        // Remove lang query parameter
-        currentUrl.searchParams.delete('lang');
-
-        // Set hash based on language and current knot
-        if (knotSlug) {
-          currentUrl.hash = language === 'en' ? `#${knotSlug}` : `#${language}/${knotSlug}`;
-        } else {
-          currentUrl.hash = language === 'en' ? '' : `#${language}`;
-        }
-
-        // Update URL without page reload
-        window.history.replaceState(null, '', currentUrl.toString());
-      }
-
-      // Enhanced function to get language from any URL format
-      function getLanguageFromUrl() {
-        // First check hash-based language
-        const { language: hashLang } = parseHashUrl();
-        if (hashLang && translations[hashLang]) {
-          return hashLang;
-        }
-
-        // Then check query parameter
-        const urlParams = new URLSearchParams(window.location.search);
-        const langParam = urlParams.get('lang');
-        if (langParam && translations[langParam]) {
-          return langParam;
-        }
-
-        return null;
-      }
-
-      function getKnotFromHash() {
-        const { language, knotSlug } = parseHashUrl();
-
-        if (!knotSlug) {
-          return { knot: null, language: language };
-        }
-
-        const knot = fishingKnots.find(k => slugify(k.name) === knotSlug);
-        return { knot: knot, language: language };
-      }
-
-      function handleHashChange() {
-        const result = getKnotFromHash();
-
-        // Handle language change from URL (with or without a knot)
-        if (result && result.language && result.language !== currentLanguage) {
-          currentLanguage = result.language;
-          saveLanguagePreference(currentLanguage);
-          updatePageLanguage();
-        }
-
-        // Handle knot display
-        if (result && result.knot) {
-          openModal(result.knot, false);
-        } else {
-          closeModalFunction(false);
-        }
       }
 
       // Filter Functions
@@ -2120,11 +1562,11 @@
 
         filteredKnots = fishingKnots.filter(knot => {
           const matchesSearch = !searchTerm ||
-            getKnotName(knot).toLowerCase().includes(searchTerm) ||
-            getKnotDescription(knot).toLowerCase().includes(searchTerm) ||
-            knot.tags.some(tag => getTagDisplay(tag).toLowerCase().includes(searchTerm)) ||
-            translateDifficulty(knot.difficulty).toLowerCase().includes(searchTerm) ||
-            translateStrength(knot.strength).toLowerCase().includes(searchTerm);
+            helpers.getKnotName(knot).toLowerCase().includes(searchTerm) ||
+            helpers.getKnotDescription(knot).toLowerCase().includes(searchTerm) ||
+            knot.tags.some(tag => helpers.getTagDisplay(tag).toLowerCase().includes(searchTerm)) ||
+            helpers.translateDifficulty(knot.difficulty).toLowerCase().includes(searchTerm) ||
+            helpers.translateStrength(knot.strength).toLowerCase().includes(searchTerm);
 
           const matchesDifficulty = !difficultyValue || knot.difficulty === difficultyValue;
           const matchesStrength = !strengthValue || knot.strength === strengthValue;
@@ -2145,159 +1587,68 @@
         renderKnots();
       }
 
-      // Language Modal Functions
-      function openLanguageModal() {
-        languageModal.classList.remove('hidden');
-        document.body.style.overflow = 'hidden';
-      }
+      // Modal Management
+      const modalManager = {
+        open(modalElement, focusElement = null) {
+          modalElement.classList.remove('hidden');
+          document.body.style.overflow = 'hidden';
+          if (focusElement) {
+            setTimeout(() => focusElement.focus(), 100);
+          }
+        },
 
-      function closeLanguageModal() {
-        languageModal.classList.add('hidden');
-        document.body.style.overflow = 'auto';
-      }
+        close(modalElement) {
+          modalElement.classList.add('hidden');
+          document.body.style.overflow = 'auto';
+        }
+      };
 
       // Search Modal Functions
-      function openSearchModal() {
-        searchModal.classList.remove('hidden');
-        document.body.style.overflow = 'hidden';
-        // Focus on search input when modal opens
-        setTimeout(() => searchInput.focus(), 100);
-      }
+      const openSearchModal = () => modalManager.open(searchModal, searchInput);
+      const closeSearchModal = () => modalManager.close(searchModal);
 
-      function closeSearchModal() {
-        searchModal.classList.add('hidden');
-        document.body.style.overflow = 'auto';
-      }
-
-                  // Event Listeners
-      languageFlag.addEventListener('click', openLanguageModal);
-      closeLanguageModalBtn.addEventListener('click', closeLanguageModal);
-
-      // Add event listeners to all language options
-      document.querySelectorAll('.language-option').forEach(option => {
-        option.addEventListener('click', (e) => {
-          const selectedLang = e.currentTarget.dataset.lang;
-          if (selectedLang && translations[selectedLang]) {
-            currentLanguage = selectedLang;
-
-            // Save user's language preference
-            const saved = saveLanguagePreference(currentLanguage);
-
-            // Update URL to reflect language change
-            updateUrlForLanguage(currentLanguage);
-
-            updatePageLanguage();
-            closeLanguageModal();
-          }
-        });
-      });
-
-      openSearchModalBtn.addEventListener('click', openSearchModal);
-      closeSearchModalBtn.addEventListener('click', closeSearchModal);
-      performSearchBtn.addEventListener('click', () => {
-        filterKnots();
-        closeSearchModal();
-      });
-      cancelSearchBtn.addEventListener('click', closeSearchModal);
-      closeModal.addEventListener('click', closeModalFunction);
-
-      // Allow Enter key to perform search in modal
-      searchInput.addEventListener('keydown', (e) => {
-        if (e.key === 'Enter') {
-          filterKnots();
-          closeSearchModal();
-        }
-      });
-
-      // Close modal when clicking outside
-      modal.addEventListener('click', (e) => {
-        if (e.target === modal) {
-          closeModalFunction();
-        }
-      });
-
-      // Close language modal when clicking outside
-      languageModal.addEventListener('click', (e) => {
-        if (e.target === languageModal) {
-          closeLanguageModal();
-        }
-      });
-
-      // Close search modal when clicking outside
-      searchModal.addEventListener('click', (e) => {
-        if (e.target === searchModal) {
-          closeSearchModal();
-        }
-      });
-
-      // Close modals with Escape key
-      document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') {
-          if (!modal.classList.contains('hidden')) {
-            closeModalFunction();
-          } else if (!languageModal.classList.contains('hidden')) {
-            closeLanguageModal();
-          } else if (!searchModal.classList.contains('hidden')) {
+      // Event Listeners
+      const eventHandlers = {
+        init() {
+          // Search modal events
+          openSearchModalBtn.addEventListener('click', openSearchModal);
+          closeSearchModalBtn.addEventListener('click', closeSearchModal);
+          performSearchBtn.addEventListener('click', () => {
+            filterKnots();
             closeSearchModal();
-          }
+          });
+          cancelSearchBtn.addEventListener('click', closeSearchModal);
+
+          // Keyboard events
+          searchInput.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter') {
+              filterKnots();
+              closeSearchModal();
+            }
+          });
+
+          // Click outside to close search modal
+          searchModal.addEventListener('click', (e) => {
+            if (e.target === searchModal) {
+              closeSearchModal();
+            }
+          });
+
+          // Global keyboard shortcuts
+          document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+              if (!searchModal.classList.contains('hidden')) {
+                closeSearchModal();
+              }
+            }
+          });
         }
-      });
+      };
 
-      // Handle hash changes for browser navigation
-      window.addEventListener('hashchange', handleHashChange);
-      window.addEventListener('popstate', handleHashChange);
-
-      // Handle browser navigation for language changes
-      window.addEventListener('popstate', function(event) {
-        const urlLanguage = getLanguageFromUrl();
-        if (urlLanguage && urlLanguage !== currentLanguage) {
-          currentLanguage = urlLanguage;
-          saveLanguagePreference(currentLanguage);
-          updatePageLanguage();
-        }
-      });
-
-      // Additional URL monitoring for manual URL changes
-      let lastUrl = window.location.href;
-      function checkForUrlChanges() {
-        const currentUrl = window.location.href;
-        if (currentUrl !== lastUrl) {
-          lastUrl = currentUrl;
-          const urlLanguage = getLanguageFromUrl();
-          if (urlLanguage && urlLanguage !== currentLanguage) {
-            currentLanguage = urlLanguage;
-            saveLanguagePreference(currentLanguage);
-            updatePageLanguage();
-          }
-        }
-      }
-
-      // Check for URL changes periodically (fallback for edge cases)
-      setInterval(checkForUrlChanges, 500);
+      eventHandlers.init();
 
       // Initialize
-      initializeLanguage();
       renderKnots();
-
-      // Check for hash on page load and handle language/knot
-      function initializeFromHash() {
-        const result = getKnotFromHash();
-
-        // Handle language change from initial URL (with or without a knot)
-        if (result && result.language && result.language !== currentLanguage) {
-          currentLanguage = result.language;
-          saveLanguagePreference(currentLanguage);
-          updatePageLanguage();
-        }
-
-        // Handle knot display
-        if (result && result.knot) {
-          openModal(result.knot, false);
-        }
-      }
-
-      // Since script is at bottom of body, DOM should be ready
-      initializeFromHash();
     </script>
   </body>
 </html>
