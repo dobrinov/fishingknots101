@@ -2,26 +2,8 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url><loc>https://fishingknots101.com/</loc></url>
   <url>
-    <loc>https://fishingknots101.com/en/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://fishingknots101.com/en/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://fishingknots101.com/de/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://fishingknots101.com/fr/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://fishingknots101.com/es/"/>
-    <xhtml:link rel="alternate" hreflang="bg" href="https://fishingknots101.com/bg/"/>
-    <xhtml:link rel="alternate" hreflang="el" href="https://fishingknots101.com/el/"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://fishingknots101.com/zh/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://fishingknots101.com/ja/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://fishingknots101.com/ru/"/>
-    <xhtml:link rel="alternate" hreflang="nl" href="https://fishingknots101.com/nl/"/>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://fishingknots101.com/pt/"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://fishingknots101.com/it/"/>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://fishingknots101.com/tr/"/>
-    <xhtml:link rel="alternate" hreflang="hi" href="https://fishingknots101.com/hi/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://fishingknots101.com/en/"/>
-  </url>
-  <url>
     <loc>https://fishingknots101.com/de/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://fishingknots101.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishingknots101.com/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://fishingknots101.com/de/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://fishingknots101.com/fr/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://fishingknots101.com/es/"/>
@@ -35,11 +17,11 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://fishingknots101.com/it/"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://fishingknots101.com/tr/"/>
     <xhtml:link rel="alternate" hreflang="hi" href="https://fishingknots101.com/hi/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://fishingknots101.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fishingknots101.com/"/>
   </url>
   <url>
     <loc>https://fishingknots101.com/fr/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://fishingknots101.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishingknots101.com/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://fishingknots101.com/de/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://fishingknots101.com/fr/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://fishingknots101.com/es/"/>
@@ -53,11 +35,11 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://fishingknots101.com/it/"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://fishingknots101.com/tr/"/>
     <xhtml:link rel="alternate" hreflang="hi" href="https://fishingknots101.com/hi/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://fishingknots101.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fishingknots101.com/"/>
   </url>
   <url>
     <loc>https://fishingknots101.com/es/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://fishingknots101.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishingknots101.com/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://fishingknots101.com/de/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://fishingknots101.com/fr/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://fishingknots101.com/es/"/>
@@ -71,11 +53,11 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://fishingknots101.com/it/"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://fishingknots101.com/tr/"/>
     <xhtml:link rel="alternate" hreflang="hi" href="https://fishingknots101.com/hi/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://fishingknots101.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fishingknots101.com/"/>
   </url>
   <url>
     <loc>https://fishingknots101.com/bg/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://fishingknots101.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishingknots101.com/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://fishingknots101.com/de/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://fishingknots101.com/fr/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://fishingknots101.com/es/"/>
@@ -89,11 +71,11 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://fishingknots101.com/it/"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://fishingknots101.com/tr/"/>
     <xhtml:link rel="alternate" hreflang="hi" href="https://fishingknots101.com/hi/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://fishingknots101.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fishingknots101.com/"/>
   </url>
   <url>
     <loc>https://fishingknots101.com/el/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://fishingknots101.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishingknots101.com/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://fishingknots101.com/de/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://fishingknots101.com/fr/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://fishingknots101.com/es/"/>
@@ -107,11 +89,11 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://fishingknots101.com/it/"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://fishingknots101.com/tr/"/>
     <xhtml:link rel="alternate" hreflang="hi" href="https://fishingknots101.com/hi/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://fishingknots101.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fishingknots101.com/"/>
   </url>
   <url>
     <loc>https://fishingknots101.com/zh/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://fishingknots101.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishingknots101.com/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://fishingknots101.com/de/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://fishingknots101.com/fr/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://fishingknots101.com/es/"/>
@@ -125,11 +107,11 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://fishingknots101.com/it/"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://fishingknots101.com/tr/"/>
     <xhtml:link rel="alternate" hreflang="hi" href="https://fishingknots101.com/hi/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://fishingknots101.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fishingknots101.com/"/>
   </url>
   <url>
     <loc>https://fishingknots101.com/ja/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://fishingknots101.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishingknots101.com/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://fishingknots101.com/de/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://fishingknots101.com/fr/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://fishingknots101.com/es/"/>
@@ -143,11 +125,11 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://fishingknots101.com/it/"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://fishingknots101.com/tr/"/>
     <xhtml:link rel="alternate" hreflang="hi" href="https://fishingknots101.com/hi/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://fishingknots101.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fishingknots101.com/"/>
   </url>
   <url>
     <loc>https://fishingknots101.com/ru/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://fishingknots101.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishingknots101.com/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://fishingknots101.com/de/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://fishingknots101.com/fr/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://fishingknots101.com/es/"/>
@@ -161,11 +143,11 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://fishingknots101.com/it/"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://fishingknots101.com/tr/"/>
     <xhtml:link rel="alternate" hreflang="hi" href="https://fishingknots101.com/hi/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://fishingknots101.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fishingknots101.com/"/>
   </url>
   <url>
     <loc>https://fishingknots101.com/nl/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://fishingknots101.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishingknots101.com/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://fishingknots101.com/de/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://fishingknots101.com/fr/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://fishingknots101.com/es/"/>
@@ -179,11 +161,11 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://fishingknots101.com/it/"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://fishingknots101.com/tr/"/>
     <xhtml:link rel="alternate" hreflang="hi" href="https://fishingknots101.com/hi/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://fishingknots101.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fishingknots101.com/"/>
   </url>
   <url>
     <loc>https://fishingknots101.com/pt/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://fishingknots101.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishingknots101.com/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://fishingknots101.com/de/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://fishingknots101.com/fr/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://fishingknots101.com/es/"/>
@@ -197,11 +179,11 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://fishingknots101.com/it/"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://fishingknots101.com/tr/"/>
     <xhtml:link rel="alternate" hreflang="hi" href="https://fishingknots101.com/hi/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://fishingknots101.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fishingknots101.com/"/>
   </url>
   <url>
     <loc>https://fishingknots101.com/it/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://fishingknots101.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishingknots101.com/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://fishingknots101.com/de/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://fishingknots101.com/fr/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://fishingknots101.com/es/"/>
@@ -215,11 +197,11 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://fishingknots101.com/it/"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://fishingknots101.com/tr/"/>
     <xhtml:link rel="alternate" hreflang="hi" href="https://fishingknots101.com/hi/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://fishingknots101.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fishingknots101.com/"/>
   </url>
   <url>
     <loc>https://fishingknots101.com/tr/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://fishingknots101.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishingknots101.com/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://fishingknots101.com/de/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://fishingknots101.com/fr/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://fishingknots101.com/es/"/>
@@ -233,11 +215,11 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://fishingknots101.com/it/"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://fishingknots101.com/tr/"/>
     <xhtml:link rel="alternate" hreflang="hi" href="https://fishingknots101.com/hi/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://fishingknots101.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fishingknots101.com/"/>
   </url>
   <url>
     <loc>https://fishingknots101.com/hi/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://fishingknots101.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fishingknots101.com/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://fishingknots101.com/de/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://fishingknots101.com/fr/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://fishingknots101.com/es/"/>
@@ -251,7 +233,7 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://fishingknots101.com/it/"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://fishingknots101.com/tr/"/>
     <xhtml:link rel="alternate" hreflang="hi" href="https://fishingknots101.com/hi/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://fishingknots101.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fishingknots101.com/"/>
   </url>
   <url>
     <loc>https://fishingknots101.com/en/improved-clinch-knot</loc>
