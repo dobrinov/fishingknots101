@@ -94,14 +94,28 @@
   var lang = (document.documentElement.lang || "en").toLowerCase().split("-")[0];
   var adText = AD_TEXTS[lang] || AD_TEXTS.en;
 
+  var adStyle = document.createElement("style");
+  adStyle.textContent =
+    "#lurepedia-ad-panel{transition:transform .3s ease,opacity .3s ease}" +
+    "#lurepedia-ad-panel.collapsed{transform:translateY(120%);opacity:0;pointer-events:none}" +
+    "#lurepedia-ad-pill{transition:transform .3s ease,opacity .3s ease}" +
+    "#lurepedia-ad-pill.collapsed{transform:translateY(200%);opacity:0;pointer-events:none}";
+  document.head.appendChild(adStyle);
+
   var ad = document.createElement("aside");
   ad.id = "lurepedia-ad";
   ad.setAttribute("aria-label", adText.label);
-  ad.className = "max-w-screen-lg mx-auto px-4 py-6";
+  ad.className = "fixed inset-x-0 bottom-0 z-40 pointer-events-none";
   ad.innerHTML =
-    '<div class="text-right text-[10px] uppercase tracking-wide text-gray-400 mb-1">' + adText.label + "</div>" +
+    '<div id="lurepedia-ad-panel" class="pointer-events-auto max-w-screen-md mx-auto pl-4 pr-16 sm:px-4 pb-4">' +
+    '<div class="relative rounded-xl border border-gray-200 bg-white shadow-lg">' +
+    '<button id="lurepedia-ad-collapse" aria-label="Collapse" title="Collapse"' +
+    ' class="absolute -top-2.5 -right-2.5 w-6 h-6 flex items-center justify-center rounded-full bg-white border border-gray-200 shadow text-gray-400 hover:text-gray-600 cursor-pointer">' +
+    '<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>' +
+    "</button>" +
+    '<div class="text-right text-[10px] uppercase tracking-wide text-gray-400 pt-1.5 pr-3">' + adText.label + "</div>" +
     '<a href="https://lurepedia.com" target="_blank" rel="sponsored noopener"' +
-    ' class="group flex items-center gap-4 rounded-xl border border-gray-200 bg-white p-4 shadow-sm transition hover:shadow-md hover:border-indigo-300">' +
+    ' class="group flex items-center gap-4 px-4 pb-3 pt-1">' +
     '<span class="text-3xl shrink-0" aria-hidden="true">🎣</span>' +
     '<span class="flex-1 min-w-0">' +
     '<span class="block text-base font-semibold text-gray-900 group-hover:text-indigo-600 transition-colors">Lurepedia</span>' +
@@ -110,8 +124,46 @@
     '<span class="hidden sm:inline-flex shrink-0 items-center rounded-md bg-indigo-600 px-3 py-2 text-sm font-medium text-white shadow group-hover:bg-indigo-500 transition">' +
     adText.cta +
     "</span>" +
-    "</a>";
+    "</a>" +
+    "</div>" +
+    "</div>" +
+    '<button id="lurepedia-ad-pill" aria-label="' + adText.cta + '"' +
+    ' class="collapsed pointer-events-auto fixed bottom-4 left-4 flex items-center gap-1.5 rounded-full bg-white/90 backdrop-blur shadow-md border border-gray-200/80 pl-2 pr-3 py-1.5 hover:shadow-lg cursor-pointer">' +
+    '<span aria-hidden="true">🎣</span>' +
+    '<span class="text-sm font-medium text-gray-700">Lurepedia</span>' +
+    '<span class="text-[9px] uppercase tracking-wide text-gray-400">' + adText.label + "</span>" +
+    "</button>";
   document.body.appendChild(ad);
+
+  var adPanel = document.getElementById("lurepedia-ad-panel");
+  var adPill = document.getElementById("lurepedia-ad-pill");
+  var adPinned = false;
+
+  function setAdCollapsed(collapsed) {
+    adPanel.classList.toggle("collapsed", collapsed);
+    adPill.classList.toggle("collapsed", !collapsed);
+    document.body.style.paddingBottom = collapsed ? "" : adPanel.offsetHeight + "px";
+  }
+  setAdCollapsed(false);
+  window.addEventListener("load", function () {
+    if (!adPanel.classList.contains("collapsed")) setAdCollapsed(false);
+  });
+
+  var adStartY = window.scrollY;
+  window.addEventListener("scroll", function () {
+    if (adPinned) return;
+    if (Math.abs(window.scrollY - adStartY) > 60) setAdCollapsed(true);
+  }, { passive: true });
+
+  adPill.addEventListener("click", function () {
+    adPinned = true;
+    setAdCollapsed(false);
+  });
+
+  document.getElementById("lurepedia-ad-collapse").addEventListener("click", function () {
+    adPinned = true;
+    setAdCollapsed(true);
+  });
 
   // ── Detail page: Lazy YouTube ────────────────────────────
   var player = document.getElementById("video-player");
